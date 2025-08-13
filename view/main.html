@@ -5,35 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="../css/style.css" rel="stylesheet"></link>
+    <link href="../css/style.css" rel="stylesheet">
+    </link>
     <script defer src="../js/test.js"></script>
     <title>Best Typist</title>
 </head>
 
 <body>
     <header>
-        <h1><span>유격연습</span></h1>
-        <h3>유진-타자-격파-연습</h3>
+        <div class="inner">
+            <h1><span>유격연습</span></h1>
+            <h3>유진-타자-격파-연습</h3>
+            <ul class="util">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
     </header>
 
-    <div class="outer_left">
-        <div class="profile">
+    <section class="outer_left">
+        <div class="wrap_profile">
             <figure>
                 <img src="" alt="프로필 사진">
             </figure>
             <div class="inner_profile">
-                <ul class="inner_person_info">
-                    <li>이름 : </li>
-                    <li>ID : </li>
-                    <li>닉네임 : </li>
-                    <li>이메일 : </li>
-                </ul>
-                <button>로그인</button>
-                <button>로그아웃</button>
-                <button>ID 찾기</button>
-                <button>비밀번호 찾기</button>
-                <button>회원가입</button>
-                <button>프로필 수정</button>
+                <div class="inner_person_info">
+                    <ul>
+                        <li>이름 : </li>
+                        <li>ID : </li>
+                        <li>닉네임 : </li>
+                        <li>이메일 : </li>
+                    </ul>
+                    <button>로그인</button>
+                    <button>로그아웃</button>
+                    <button>ID 찾기</button>
+                    <button>비밀번호 찾기</button>
+                    <button>회원가입</button>
+                    <button>프로필 수정</button>
+                </div>
 
                 <div class="inner_typing_info">
                     <input type="radio" name="lang" value="korean"> 한글타자
@@ -49,9 +61,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="outer_center">
+    <section class="outer_center">
         <div class="menu"></div>
         <ul>
             <li>자리 연습</li>
@@ -62,10 +74,10 @@
             <li>환경설정</li>
             <li>끝</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="outer_right">
-        <article class="description">
+    <section class="outer_right">
+        <article class="selected_description">
             <div class="inner_box">
                 <h2>선택한 메뉴</h2>
                 <p class="text">
@@ -76,7 +88,7 @@
                 </p>
             </div>
         </article>
-    </div>
+    </section>
     <footer>
 
     </footer>

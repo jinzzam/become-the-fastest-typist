@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    display: block;
 }
 
 a {
@@ -17,29 +16,101 @@ ul, li{
 
 
 header {
-    border: 5px solid #f00;
+    border-bottom: 5px solid #f00;
     width: 100%;
-    height: 15%;
+}
+header .inner{
+    height: 80px;
+    margin: 0px auto;
+    position: relative;
+}
+header .inner h1{
+    text-align: center;
+}
+header .inner h3{
+    text-align: center;
+}
+header .inner .util{
+    text-align: center;
+    top: 10px;
+    right: 20px;
+    position: absolute;
+}
+header .inner .util li{
+    float: left;
+    padding-right: 5px;
+}
+header .inner .util li a{
+    font: 12px/1 "arial";
+    color: #999;
+    padding: 0px 10px;
+    display: block;
+}
+
+section{
+    height: 420px;
+    float: left;
 }
 
 .outer_left {
     border: 5px solid #000;
+    width: 15%;
+    text-align: center;
+    align-content: center;
+}
+
+.outer_left .inner_profile {
     float: left;
 }
 
 .outer_center {
     border: 5px solid #000;
+    width: 25%;
+}
+.outer_center .menu{
+    margin: 0;
+    padding: 0;
+}
+.outer_center li{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     float: left;
+    border: 1px solid slateblue;
+    position: relative;
+    display: block;
 }
 
 .outer_right {
     border: 5px solid #000;
+    width: 60%;
+}
+.outer_right .selected_description{
     float: left;
+}
+.outer_right .selected_description .inner_box {
+    margin: 5px auto;
+    padding: 5px auto;
+    border: 1px solid brown;
+}
+.outer_right .selected_description .inner_box h2{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    border: 1px solid aqua;
+}
+.outer_right .selected_description .inner_box p{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid aqua;
 }
 
 footer {
     border: 5px solid #Ff0;
     width: 100%;
-    height: 15%;
-    
+    height: 20vh;
+    position: relative;
+    float: left;
 }
