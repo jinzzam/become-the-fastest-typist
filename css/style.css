@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li,
+ol {
+    list-style-type: none;
+}
+
+header {
+    border: 5px solid #000;
+}
+
+.outer_left {
+    border: 5px solid #000;
+    float: left;
+}
+
+.outer_center {
+    border: 5px solid #000;
+    float: left;
+}
+
+.outer_right {
+    border: 5px solid #000;
+    float: left;
+}
+
+footer {
+    border: 5px solid #000;
+
+}
