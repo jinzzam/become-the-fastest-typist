@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     </link>
-    <script defer src="../js/test.js"></script>
     <title>Best Typist</title>
 </head>
 
@@ -16,80 +15,85 @@
         <div class="inner">
             <h1><span>유격연습</span></h1>
             <h3>유진-타자-격파-연습</h3>
-            <ul class="util">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Setting</a></li>
-            </ul>
+            <div class="util">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Setting</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <section class="outer_left">
-        <div class="wrap_profile">
-            <figure>
-                <img src="" alt="프로필 사진">
-            </figure>
-            <div class="inner_profile">
-                <div class="inner_person_info">
-                    <h1>이름</h1>
-                    <h2>닉네임</h2>
-                    <ul id="contact">
-                        <li>이메일 : zzz@naver.com</li>
-                    </ul>
-                    <button>로그인</button>
-                    <button>로그아웃</button>
-                    <button>ID 찾기</button>
-                    <button>비밀번호 찾기</button>
-                    <button>회원가입</button>
-                    <button>프로필 수정</button>
-                </div>
+    <div class="main-content">
 
-                <div class="inner_typing_info">
-                    <input type="radio" name="lang" value="korean"> 한글타자
-                    <input type="radio" name="lang" value="english"> 영어타자
-                    <ul>
-                        <li>목표타수 : </li>
-                        <li>평균타수 : </li>
-                        <li>목표오타율 : </li>
-                        <li>평균오타율 : </li>
-                    </ul>
-                    <button>최고기록 확인</button>
-                    <button>내 목표 수정</button>
+
+        <section class="outer_left">
+            <div class="wrap_profile">
+                <figure>
+                    <img src="" alt="프로필 사진">
+                </figure>
+                <div class="inner_profile">
+                    <div class="inner_person_info logged-out">
+                        <h1>이름</h1>
+                        <h2>닉네임</h2>
+                        <ul id="contact">
+                            <li>이메일 : zzz@naver.com</li>
+                        </ul>
+                        <button class="logged-in-btn">로그아웃</button>
+                        <button class="logged-in-btn">프로필 수정</button>
+
+                        <button class="logged-out-btn">로그인</button>
+                        <button class="logged-out-btn">회원가입</button>
+                    </div>
+
+                    <div class="inner_typing_info">
+                        <input type="radio" name="lang" value="korean"> 한글타자
+                        <input type="radio" name="lang" value="english"> 영어타자
+                        <ul>
+                            <li>목표타수 : </li>
+                            <li>평균타수 : </li>
+                            <li>목표오타율 : </li>
+                            <li>평균오타율 : </li>
+                        </ul>
+                        <button>최고기록 확인</button>
+                        <button>내 목표 수정</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="outer_center">
-        <div class="menu"></div>
-        <ul>
-            <li><a href="#">자리 연습</a></li>
-            <li><a href="#">낱말 연습</a></li>
-            <li><a href="#">짧은 글 연습</a></li>
-            <li><a href="#">긴 글 연습</a></li>
-            <li><a href="#">놀이</a></li>
-            <li><a href="#">환경설정</a></li>
-            <li><a href="#">끝</a></li>
-        </ul>
-    </section>
+        <section class="outer_center">
+            <div class="menu"></div>
+            <ul>
+                <li><a href="#">자리 연습</a></li>
+                <li><a href="#">낱말 연습</a></li>
+                <li><a href="#">짧은 글 연습</a></li>
+                <li><a href="#">긴 글 연습</a></li>
+                <li><a href="#">놀이</a></li>
+                <li><a href="#">환경설정</a></li>
+                <li><a href="#">끝</a></li>
+            </ul>
+        </section>
 
-    <section class="outer_right">
-        <article class="selected_description">
-            <div class="inner_box">
-                <h2>선택한 메뉴</h2>
-                <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Est placeat enim dignissimos suscipit. Ullam, illo?
-                    Aspernatur, numquam sequi ipsum blanditiis vitae perferendis,
-                    ratione, officia voluptates debitis obcaecati amet aliquam quaerat?
-                </p>
-                <button>시작하기</button>
-                <button>돌아가기</button>
-            </div>
-        </article>
-    </section>
+        <section class="outer_right">
+            <article class="selected_description">
+                <div class="inner_box">
+                    <h2>선택한 메뉴</h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Est placeat enim dignissimos suscipit. Ullam, illo?
+                        Aspernatur, numquam sequi ipsum blanditiis vitae perferendis,
+                        ratione, officia voluptates debitis obcaecati amet aliquam quaerat?
+                    </p>
+                    <button>시작하기</button>
+                    <button>돌아가기</button>
+                </div>
+            </article>
+        </section>
+    </div>
     <footer>
         <div class="inner">
             <div class="upper">
