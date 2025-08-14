@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.6;
-    color: #f5f5f5;
+    color: #3f473c;
     /* 글자색 변경 */
     background-color: #3f473c;
     /* 배경색 변경 (짙은 녹색) */

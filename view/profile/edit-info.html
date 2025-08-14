@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/join.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(document).ready(function () {
+                $(".nav-link").click(function () {
+                    //클릭하는 순간 active 클래스를 모두 지워서 초기화시킴. 따라서 모든 섹션 숨겨짐.
+                    $("section").removeClass("active");
+                    // a 태그 속성 중 data-section을 가져온다.
+                    const target = $(this).data("section");
+                    // alert(target);
+                    $("#" + target).addClass("active");
+                });
+            });
+        });
+    </script>
+    <title>회원가입</title>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><span>유격연습</span></h1>
+            <h3>유진-타자-격파-연습</h3>
+            <div class="util">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Setting</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#" class="nav-link" data-section="login">로그인</a>
+        <a href="#" class="nav-link" data-section="member">회원정보</a>
+        <a href="#" class="nav-link" data-section="edit">정보 수정</a>
+    </nav>
+
+    <section id="joinForm" class="active">
+        <h2>회원정보 수정</h2>
+        <form id="loginForm">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+            
+            <button type="submit">수정완료</button>
+            <button type="reset">다시작성</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 유진-타자-격파-연습</p>
+    </footer>
+</body>
+
+</html>

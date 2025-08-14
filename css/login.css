@@ -1,24 +1,5 @@
 @charset "utf-8";
 
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #c7d1c1;
-    padding: 10px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    font-size: 16px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 section {
     max-width: 800px;
     margin: 20px auto;
@@ -34,4 +15,3 @@ section.active {
     /* 활성화된 섹션만 보임 */
     display: block;
 }
-
