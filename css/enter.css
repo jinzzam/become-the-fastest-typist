@@ -79,26 +79,31 @@ section.active {
 
 /* 로그인 Form Styles */
 
-#findForm h2 {
+#loginForm h2,
+#joinForm h2 {
     color: #2b3a2c;
     text-align: center;
     margin-bottom: 15px;
 }
 
-#findForm #find-pw-form {
+#loginForm #login_info,
+#joinForm #join_info,
+#loginForm #ch-pw {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     gap: 8px; /* Add space between elements */
 }
 
-#findForm label {
+#loginForm label,
+#joinForm label {
     font-weight: bold;
     color: #495057; /* Darker grey for text */
     text-transform: uppercase; /* For a military feel */
     letter-spacing: 1px;
 }
 
-#findForm input {
+#loginForm input,
+#joinForm input {
     width: 500px;
     padding: 8px;
     border: 2px solid #a0ac9b; /* Muted green border */
@@ -109,33 +114,22 @@ section.active {
     transition: border-color 0.3s;
 }
 
-#findForm input:focus {
+#loginForm input:focus ,
+#joinForm input:focus{
     border-color: #2b3a2c; /* Darker green on focus */
     outline: none;
 }
 
-#findForm #find-pw-form #btn_verify {
-    width: 50px;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-#findForm .btn {
+#loginForm .btn ,
+#joinForm .btn{
     float: left;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-#findForm .btn button {
+#loginForm button ,
+#joinForm button{
     width: 235px;
     padding: 10px;
     font-size: 16px;
@@ -149,26 +143,23 @@ section.active {
     transition: background-color 0.3s;
 }
 
-#findForm button[type="submit"] {
+#loginForm button[type="submit"] ,
+#joinForm button[type="submit"] {
     background-color: #2b3a2c; /* Main button color */
 }
 
-#findForm button[type="submit"]:hover {
-    background-color: #1a231b; /* Darken on hover */
-}
-#findForm #find-pw-form #btn_verify[type="submit"] {
-    background-color: #2b3a2c; /* Main button color */
-}
-
-#findForm #find-pw-form #btn_verify[type="submit"]:hover {
+#loginForm button[type="submit"]:hover,
+#joinForm button[type="submit"]:hover {
     background-color: #1a231b; /* Darken on hover */
 }
 
-#findForm button[type="reset"] {
+#loginForm button[type="reset"],
+#joinForm button[type="reset"] {
     background-color: #a0ac9b; /* Secondary button color */
 }
 
-#findForm button[type="reset"]:hover {
+#loginForm button[type="reset"]:hover,
+#joinForm button[type="reset"]:hover {
     background-color: #8c988a; /* Darken on hover */
 }
 
