@@ -27,7 +27,7 @@ header {
     background-color: #2e352b;
     /* 더 어두운 녹색 */
     color: #fff;
-    padding: 10px 0;
+    padding: 10px;
     border-bottom: 2px solid #5d6756;
 }
 
@@ -40,6 +40,7 @@ header .inner {
 header h1 {
     float: left;
     font-size: 2rem;
+    margin-left: 25px;
 }
 
 header h3 {

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="../../js/jquery.js"></script>
+    <link rel="stylesheet" href="../../css/join.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/jquery.js"></script>
     <script>
-        $(function(){
-            $(document).ready(function(){
-                $(".nav-link").click(function(){
+        $(function () {
+            $(document).ready(function () {
+                $(".nav-link").click(function () {
                     //클릭하는 순간 active 클래스를 모두 지워서 초기화시킴. 따라서 모든 섹션 숨겨짐.
                     $("section").removeClass("active");
                     // a 태그 속성 중 data-section을 가져온다.
@@ -18,11 +21,24 @@
             });
         });
     </script>
-    <title>Document</title>
+    <title>회원가입</title>
 </head>
+
 <body>
-       <header>
-        <h1>유진-타자-격파-연습</h1>
+    <header>
+        <div class="inner">
+            <h1><span>유격연습</span></h1>
+            <h3>유진-타자-격파-연습</h3>
+            <div class="util">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Setting</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <nav>
@@ -57,7 +73,7 @@
     </section>
 
     <!-- 수정 섹션 -->
-     <section id="member">
+    <section id="member">
         <h2>회원정보</h2>
         <form id="memberForm">
             <label for="name">이름</label>
@@ -75,4 +91,5 @@
         <p>&copy; 2025 유진-타자-격파-연습</p>
     </footer>
 </body>
+
 </html>
