@@ -5,8 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="../css/header-footer.css" rel="stylesheet">
-    </link>
+    <link rel="stylesheet" href="../../css/enter.css">
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <script src="../../js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(document).ready(function () {
+                $(".nav-link").click(function () {
+                    //클릭하는 순간 active 클래스를 모두 지워서 초기화시킴. 따라서 모든 섹션 숨겨짐.
+                    $("section").removeClass("active");
+                    // a 태그 속성 중 data-section을 가져온다.
+                    const target = $(this).data("section");
+                    // alert(target);
+                    $("#" + target).addClass("active");
+                });
+            });
+        });
+    </script>
     <title>Best Typist</title>
 </head>
 
@@ -14,7 +29,6 @@
     <header>
         <div class="inner">
             <h1><span>유격연습</span></h1>
-            <h3>유진-타자-격파-연습</h3>
             <div class="util">
                 <ul>
                     <li><a href="#">Contact</a></li>
@@ -31,30 +45,10 @@
 
     </section>
 
-
-
     <footer>
-        <div class="inner">
-            <div class="upper">
-                <h1>유격연습</h1>
-                <ul>
-                    <li><a href="#">Policy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Family</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
-            </div>
-            <div class="lower">
-                <address>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique perferendis nihil porro nulla
-                    magni placeat eaque excepturi dolore reiciendis aut, assumenda quas molestiae quibusdam iure est,
-                    quis laborum rerum? Optio.
-                </address>
-                <p>
-                    2025 유진-타자-격파-연습 &copy; copyright all right reserved.
-                </p>
-            </div>
-        </div>
+        <p>
+            2025 유진-타자-격파-연습 &copy; copyright all right reserved.
+        </p>
     </footer>
 </body>
 
