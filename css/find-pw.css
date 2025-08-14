@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/* Basic body and container styles from the original CSS */
+body {
+    background-color: #f0f2f5; /* Light grey background */
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2b3a2c; /* Darker green */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 span {
+    color: #c7d1c1; /* Lighter green */
+}
+
+header .util ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .util li {
+    margin-left: 15px;
+}
+
+header .util a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #c7d1c1;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #e9ecef; /* Slightly darker grey for content box */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+/* 로그인 Form Styles */
+
+#findForm h2 {
+    color: #2b3a2c;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#findForm #find-pw-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 8px; /* Add space between elements */
+}
+
+#findForm label {
+    font-weight: bold;
+    color: #495057; /* Darker grey for text */
+    text-transform: uppercase; /* For a military feel */
+    letter-spacing: 1px;
+}
+
+#findForm input {
+    width: 500px;
+    padding: 8px;
+    border: 2px solid #a0ac9b; /* Muted green border */
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #ffffff; /* White input background */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s;
+}
+
+#findForm input:focus {
+    border-color: #2b3a2c; /* Darker green on focus */
+    outline: none;
+}
+
+#findForm #find-pw-form #btn_verify {
+    width: 50px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#findForm .btn {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#findForm .btn button {
+    width: 235px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#findForm button[type="submit"] {
+    background-color: #2b3a2c; /* Main button color */
+}
+
+#findForm button[type="submit"]:hover {
+    background-color: #1a231b; /* Darken on hover */
+}
+#findForm #find-pw-form #btn_verify[type="submit"] {
+    background-color: #2b3a2c; /* Main button color */
+}
+
+#findForm #find-pw-form #btn_verify[type="submit"]:hover {
+    background-color: #1a231b; /* Darken on hover */
+}
+
+#findForm button[type="reset"] {
+    background-color: #a0ac9b; /* Secondary button color */
+}
+
+#findForm button[type="reset"]:hover {
+    background-color: #8c988a; /* Darken on hover */
+}
+
+/* Footer styles from the original CSS */
+footer {
+    background-color: #2b3a2c;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
