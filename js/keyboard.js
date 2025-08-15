@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys = document.querySelectorAll('.key');
     // 한/영 키 요소를 ID로 직접 가져옵니다.
     const hangulEngKey = document.getElementById('key-HangulMode');
-    const userInput = document.getElementById('user-input'); // 사용자 입력 필드 가져오기
+    // const userInput = document.getElementById('user-input'); // 사용자 입력 필드 가져오기
 
 
     let isShiftPressed = false;
@@ -109,23 +109,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     };
 
-    // input 필드에 포커스가 있을 때 이벤트 처리
-    // userInput.addEventListener('focus, blur, keydown', handleKeyboardEvent_keydown);
-    // userInput.addEventListener('focus, blur, keyup', handleKeyboardEvent_keyup);
     document.addEventListener('keydown', handleKeyboardEvent_keydown);
     document.addEventListener('keyup', handleKeyboardEvent_keyup);
 
-    // input 필드에 포커스가 없을 때 (document 전체) 이벤트 처리
-    // input 필드가 이벤트의 타겟이 아닐 때만 처리하도록 조건부 로직 추가
+    // input 필드에 포커스가 있을 때 (document 전체) 이벤트 처리
     // document.addEventListener('keydown', (event) => {
-    //     if (event.target !== userInput){
-    //         handleKeyboardEvent_keydown(event);
+    //     if (event.target === userInput){
+    //         handleKeyboardEvent_keydown();
     //     }
     // });
 
     // document.addEventListener('keyup', (event) => {
-    //     if (event.target !== userInput){
-    //         handleKeyboardEvent_keyup(event);
+    //     if (event.target === userInput){
+    //         handleKeyboardEvent_keyup();
     //     }
     // });
 
