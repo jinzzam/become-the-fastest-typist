@@ -1,5 +1,6 @@
+<!-- ========================================================================================================= -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -9,169 +10,97 @@
     <link href="../css/header-footer.css" rel="stylesheet">
     <script src="../js/jquery.js"></script>
     <script src="../js/keyboard.js"></script>
-    <!-- <script src="../js/show-real-time-type.js"></script> -->
-    <title>Best Typist</title>
+    <title>타자 연습 프로그램</title>
 </head>
 
 <body>
-    <header>
-        <div class="inner">
-            <h1><span>유격연습</span></h1>
-            <div class="util">
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Join</a></li>
-                    <li><a href="#">Setting</a></li>
-                </ul>
+
+    <div class="container">
+        <h1>두벌식 키보드 타자 연습</h1>
+        <div class="typing-area">
+            <p id="practice-text">안녕하세요. 타자 연습을 시작해볼까요?</p>
+            <input type="text" id="user-input" autofocus>
+        </div>
+
+        <div class="keyboard">
+            <div class="keyboard-row">
+                <div class="key" id="key-Backquote" data-shift="~" data-original="`">`</div>
+                <div class="key" id="key-Digit1" data-shift="!" data-original="1">1</div>
+                <div class="key" id="key-Digit2" data-shift="@" data-original="2">2</div>
+                <div class="key" id="key-Digit3" data-shift="#" data-original="3">3</div>
+                <div class="key" id="key-Digit4" data-shift="$" data-original="4">4</div>
+                <div class="key" id="key-Digit5" data-shift="%" data-original="5">5</div>
+                <div class="key" id="key-Digit6" data-shift="^" data-original="6">6</div>
+                <div class="key" id="key-Digit7" data-shift="&" data-original="7">7</div>
+                <div class="key" id="key-Digit8" data-shift="*" data-original="8">8</div>
+                <div class="key" id="key-Digit9" data-shift="(" data-original="9">9</div>
+                <div class="key" id="key-Digit0" data-shift=")" data-original="0">0</div>
+                <div class="key" id="key-Minus" data-shift="_" data-original="-">-</div>
+                <div class="key" id="key-Equal" data-shift="+" data-original="=">=</div>
+                <div class="key backspace" id="key-Backspace">←</div>
+            </div>
+
+            <div class="keyboard-row">
+                <div class="key tab" id="key-Tab">Tab</div>
+                <div class="key" id="key-KeyQ" data-shift="Q" data-original="q">q</div>
+                <div class="key" id="key-KeyW" data-shift="W" data-original="w">w</div>
+                <div class="key" id="key-KeyE" data-shift="E" data-original="e">e</div>
+                <div class="key" id="key-KeyR" data-shift="R" data-original="r">r</div>
+                <div class="key" id="key-KeyT" data-shift="T" data-original="t">t</div>
+                <div class="key" id="key-KeyY" data-shift="Y" data-original="y">y</div>
+                <div class="key" id="key-KeyU" data-shift="U" data-original="u">u</div>
+                <div class="key" id="key-KeyI" data-shift="I" data-original="i">i</div>
+                <div class="key" id="key-KeyO" data-shift="O" data-original="o">o</div>
+                <div class="key" id="key-KeyP" data-shift="P" data-original="p">p</div>
+                <div class="key" id="key-BracketLeft" data-shift="{" data-original="[">[</div>
+                <div class="key" id="key-BracketRight" data-shift="}" data-original="]">]</div>
+                <div class="key backslash" id="key-Backslash" data-shift="|" data-original="\">\</div>
+            </div>
+
+            <div class="keyboard-row">
+                <div class="key caps" id="key-CapsLock">Caps Lock</div>
+                <div class="key" id="key-KeyA" data-shift="A" data-original="a">a</div>
+                <div class="key" id="key-KeyS" data-shift="S" data-original="s">s</div>
+                <div class="key" id="key-KeyD" data-shift="D" data-original="d">d</div>
+                <div class="key" id="key-KeyF" data-shift="F" data-original="f">f</div>
+                <div class="key" id="key-KeyG" data-shift="G" data-original="g">g</div>
+                <div class="key" id="key-KeyH" data-shift="H" data-original="h">h</div>
+                <div class="key" id="key-KeyJ" data-shift="J" data-original="j">j</div>
+                <div class="key" id="key-KeyK" data-shift="K" data-original="k">k</div>
+                <div class="key" id="key-KeyL" data-shift="L" data-original="l">l</div>
+                <div class="key" id="key-Semicolon" data-shift=":" data-original=";">;</div>
+                <div class="key" id="key-Quote" data-shift='"' data-original="'">'</div>
+                <div class="key enter" id="key-Enter">Enter</div>
+            </div>
+
+            <div class="keyboard-row">
+                <div class="key shift" id="key-ShiftLeft">Shift</div>
+                <div class="key" id="key-KeyZ" data-shift="Z" data-original="z">z</div>
+                <div class="key" id="key-KeyX" data-shift="X" data-original="x">x</div>
+                <div class="key" id="key-KeyC" data-shift="C" data-original="c">c</div>
+                <div class="key" id="key-KeyV" data-shift="V" data-original="v">v</div>
+                <div class="key" id="key-KeyB" data-shift="B" data-original="b">b</div>
+                <div class="key" id="key-KeyN" data-shift="N" data-original="n">n</div>
+                <div class="key" id="key-KeyM" data-shift="M" data-original="m">m</div>
+                <div class="key" id="key-Comma" data-shift="&gt;" data-original=",">,</div>
+                <div class="key" id="key-Period" data-shift=">" data-original=".">.</div>
+                <div class="key" id="key-Slash" data-shift="?" data-original="/">/</div>
+                <div class="key shift" id="key-ShiftRight">Shift</div>
+            </div>
+
+            <div class="keyboard-row">
+                <div class="key ctrl" id="key-ControlLeft">Ctrl</div>
+                <div class="key win" id="key-MetaLeft">Win</div>
+                <div class="key alt" id="key-AltLeft">Alt</div>
+                <div class="key space" id="key-Space"></div>
+                <div class="key hangul" id="Hangul">한/영</div>
+                <div class="key alt" id="key-AltRight">Alt</div>
+                <!-- <div class="key win" id="key-MetaRight">Win</div>
+                            <div class="key menu" id="key-ContextMenu">Menu</div>
+                            <div class="key ctrl" id="key-ControlRight">Ctrl</div> -->
             </div>
         </div>
-    </header>
-
-    <section class="center">
-        <div class="left_banner"> 왼쪽 배너
-            <div id="controls">
-                연습종류
-                뒤로가기
-                그만하기
-            </div>
-            <div id="user-info">
-                <img src="" alt="캐릭터 얼굴">
-                <ul>
-                    <li>닉네임</li>
-                    <li>평균타수</li>
-                    <li>최고기록</li>
-                </ul>
-            </div>
-            <div id="typing-rate">
-                현재 속도
-                현재 오타율
-            </div>
-        </div>
-        <main class="inner_center"> 전체 연습하는 구간
-            <div>
-                진행률 보기
-            </div>
-            <div>
-                <input type="text" name="temp" id="temp">
-                타자 쳐야하는 내용 보기
-            </div>
-<!-- ========================================================================================================= -->
-            <!DOCTYPE html>
-            <html lang="ko">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>타자 연습 프로그램</title>
-            </head>
-
-            <body>
-
-                <div class="container">
-                    <h1>두벌식 키보드 타자 연습</h1>
-                    <div class="typing-area">
-                        <p id="practice-text">안녕하세요. 타자 연습을 시작해볼까요?</p>
-                        <input type="text" id="user-input" autofocus>
-                    </div>
-
-                    <div class="keyboard">
-                        <div class="keyboard-row">
-                            <div class="key" id="key-`" data-shift="~">`</div>
-                            <div class="key" id="key-1" data-shift="!">1</div>
-                            <div class="key" id="key-2" data-shift="@">2</div>
-                            <div class="key" id="key-3" data-shift="#">3</div>
-                            <div class="key" id="key-4" data-shift="$">4</div>
-                            <div class="key" id="key-5" data-shift="%">5</div>
-                            <div class="key" id="key-6" data-shift="^">6</div>
-                            <div class="key" id="key-7" data-shift="&">7 </div>
-                            <div class="key" id="key-8" data-shift="*">8</div>
-                            <div class="key" id="key-9" data-shift="(">9</div>
-                            <div class="key" id="key-0" data-shift=")">0</div>
-                            <div class="key" id="key--" data-shift="_">-</div>
-                            <div class="key" id="key-=" data-shift="+">=</div>
-                            <div class="key backspace" id="key-Backspace">←</div>
-                        </div>
-
-                        <div class="keyboard-row">
-                            <div class="key tab" id="key-Tab">Tab</div>
-                            <div class="key" id="key-q" data-shift="Q">q</div>
-                            <div class="key" id="key-w" data-shift="W">w</div>
-                            <div class="key" id="key-e" data-shift="E">e</div>
-                            <div class="key" id="key-r" data-shift="R">r</div>
-                            <div class="key" id="key-t" data-shift="T">t</div>
-                            <div class="key" id="key-y" data-shift="Y">y</div>
-                            <div class="key" id="key-u" data-shift="U">u</div>
-                            <div class="key" id="key-i" data-shift="I">i</div>
-                            <div class="key" id="key-o" data-shift="O">o</div>
-                            <div class="key" id="key-p" data-shift="P">p</div>
-                            <div class="key" id="key-[" data-shift="{">[</div>
-                            <div class="key" id="key-]" data-shift="}">]</div>
-                            <div class="key backslash" id="key-\" data-shift="|">\</div>
-                        </div>
-
-                        <div class="keyboard-row">
-                            <div class="key caps" id="key-CapsLock">Caps Lock</div>
-                            <div class="key" id="key-a" data-shift="A">a</div>
-                            <div class="key" id="key-s" data-shift="S">s</div>
-                            <div class="key" id="key-d" data-shift="D">d</div>
-                            <div class="key" id="key-f" data-shift="F">f</div>
-                            <div class="key" id="key-g" data-shift="G">g</div>
-                            <div class="key" id="key-h" data-shift="H">h</div>
-                            <div class="key" id="key-j" data-shift="J">j</div>
-                            <div class="key" id="key-k" data-shift="K">k</div>
-                            <div class="key" id="key-l" data-shift="L">l</div>
-                            <div class="key" id="key-;" data-shift=":">;</div>
-                            <div class="key" id="key-'" data-shift="&quot;">'</div>
-                            <div class="key enter" id="key-Enter">Enter</div>
-                        </div>
-
-                        <div class="keyboard-row">
-                            <div class="key shift" id="key-ShiftLeft">Shift</div>
-                            <div class="key" id="key-z" data-shift="Z">z</div>
-                            <div class="key" id="key-x" data-shift="X">x</div>
-                            <div class="key" id="key-c" data-shift="C">c</div>
-                            <div class="key" id="key-v" data-shift="V">v</div>
-                            <div class="key" id="key-b" data-shift="B">b</div>
-                            <div class="key" id="key-n" data-shift="N">n</div>
-                            <div class="key" id="key-m" data-shift="M">m</div>
-                            <div class="key" id="key-," data-shift="&lt;">,</div>
-                            <div class="key" id="key-." data-shift="&gt;">.</div>
-                            <div class="key" id="key-/" data-shift="?">/</div>
-                            <div class="key shift" id="key-ShiftRight">Shift</div>
-                        </div>
-
-                        <div class="keyboard-row">
-                            <div class="key ctrl" id="key-ControlLeft">Ctrl</div>
-                            <div class="key win" id="key-MetaLeft">Win</div>
-                            <div class="key alt" id="key-AltLeft">Alt</div>
-                            <div class="key space" id="key- ">&nbsp;Space</div>
-                            <div class="key lang" id="key-AltRight">한/영</div>
-                            <!-- <div class="key alt" id="key-AltRight">Alt</div> -->
-                            <!-- <div class="key win" id="key-MetaRight">Win</div> -->
-                            <!-- <div class="key menu" id="key-Menu">Menu</div> -->
-                            <!-- <div class="key ctrl" id="key-Control">Ctrl</div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <script src=" ../js/keyboard.js">
-                </script>
-            </body>
-
-            </html>
-            <!-- <canvas>
-                타자 치는 키보드와 손가락 실시간 확인
-            </canvas> -->
-        </main>
-    </section>
-
-    <footer>
-        <p>
-            2025 유진-타자-격파-연습 &copy; copyright all right reserved.
-        </p>
-    </footer>
+    </div>
 </body>
 
 </html>
