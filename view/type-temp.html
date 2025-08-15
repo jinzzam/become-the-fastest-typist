@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../css/typing.css">
+    <link rel="stylesheet" href="../css/keyboard.css">
     <link href="../css/header-footer.css" rel="stylesheet">
     <script src="../js/jquery.js"></script>
-    <script src="../js/show-real-time-type.js"></script>
-    
+    <script src="../js/keyboard.js"></script>
+    <!-- <script src="../js/show-real-time-type.js"></script> -->
     <title>Best Typist</title>
 </head>
 
@@ -57,9 +57,113 @@
                 <input type="text" name="temp" id="temp">
                 타자 쳐야하는 내용 보기
             </div>
-            <canvas>
+<!-- ========================================================================================================= -->
+            <!DOCTYPE html>
+            <html lang="ko">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>타자 연습 프로그램</title>
+            </head>
+
+            <body>
+
+                <div class="container">
+                    <h1>두벌식 키보드 타자 연습</h1>
+                    <div class="typing-area">
+                        <p id="practice-text">안녕하세요. 타자 연습을 시작해볼까요?</p>
+                        <input type="text" id="user-input" autofocus>
+                    </div>
+
+                    <div class="keyboard">
+                        <div class="keyboard-row">
+                            <div class="key" id="key-`" data-shift="~">`</div>
+                            <div class="key" id="key-1" data-shift="!">1</div>
+                            <div class="key" id="key-2" data-shift="@">2</div>
+                            <div class="key" id="key-3" data-shift="#">3</div>
+                            <div class="key" id="key-4" data-shift="$">4</div>
+                            <div class="key" id="key-5" data-shift="%">5</div>
+                            <div class="key" id="key-6" data-shift="^">6</div>
+                            <div class="key" id="key-7" data-shift="&">7 </div>
+                            <div class="key" id="key-8" data-shift="*">8</div>
+                            <div class="key" id="key-9" data-shift="(">9</div>
+                            <div class="key" id="key-0" data-shift=")">0</div>
+                            <div class="key" id="key--" data-shift="_">-</div>
+                            <div class="key" id="key-=" data-shift="+">=</div>
+                            <div class="key backspace" id="key-Backspace">←</div>
+                        </div>
+
+                        <div class="keyboard-row">
+                            <div class="key tab" id="key-Tab">Tab</div>
+                            <div class="key" id="key-q" data-shift="Q">q</div>
+                            <div class="key" id="key-w" data-shift="W">w</div>
+                            <div class="key" id="key-e" data-shift="E">e</div>
+                            <div class="key" id="key-r" data-shift="R">r</div>
+                            <div class="key" id="key-t" data-shift="T">t</div>
+                            <div class="key" id="key-y" data-shift="Y">y</div>
+                            <div class="key" id="key-u" data-shift="U">u</div>
+                            <div class="key" id="key-i" data-shift="I">i</div>
+                            <div class="key" id="key-o" data-shift="O">o</div>
+                            <div class="key" id="key-p" data-shift="P">p</div>
+                            <div class="key" id="key-[" data-shift="{">[</div>
+                            <div class="key" id="key-]" data-shift="}">]</div>
+                            <div class="key backslash" id="key-\" data-shift="|">\</div>
+                        </div>
+
+                        <div class="keyboard-row">
+                            <div class="key caps" id="key-CapsLock">Caps Lock</div>
+                            <div class="key" id="key-a" data-shift="A">a</div>
+                            <div class="key" id="key-s" data-shift="S">s</div>
+                            <div class="key" id="key-d" data-shift="D">d</div>
+                            <div class="key" id="key-f" data-shift="F">f</div>
+                            <div class="key" id="key-g" data-shift="G">g</div>
+                            <div class="key" id="key-h" data-shift="H">h</div>
+                            <div class="key" id="key-j" data-shift="J">j</div>
+                            <div class="key" id="key-k" data-shift="K">k</div>
+                            <div class="key" id="key-l" data-shift="L">l</div>
+                            <div class="key" id="key-;" data-shift=":">;</div>
+                            <div class="key" id="key-'" data-shift="&quot;">'</div>
+                            <div class="key enter" id="key-Enter">Enter</div>
+                        </div>
+
+                        <div class="keyboard-row">
+                            <div class="key shift" id="key-ShiftLeft">Shift</div>
+                            <div class="key" id="key-z" data-shift="Z">z</div>
+                            <div class="key" id="key-x" data-shift="X">x</div>
+                            <div class="key" id="key-c" data-shift="C">c</div>
+                            <div class="key" id="key-v" data-shift="V">v</div>
+                            <div class="key" id="key-b" data-shift="B">b</div>
+                            <div class="key" id="key-n" data-shift="N">n</div>
+                            <div class="key" id="key-m" data-shift="M">m</div>
+                            <div class="key" id="key-," data-shift="&lt;">,</div>
+                            <div class="key" id="key-." data-shift="&gt;">.</div>
+                            <div class="key" id="key-/" data-shift="?">/</div>
+                            <div class="key shift" id="key-ShiftRight">Shift</div>
+                        </div>
+
+                        <div class="keyboard-row">
+                            <div class="key ctrl" id="key-ControlLeft">Ctrl</div>
+                            <div class="key win" id="key-MetaLeft">Win</div>
+                            <div class="key alt" id="key-AltLeft">Alt</div>
+                            <div class="key space" id="key- ">&nbsp;Space</div>
+                            <div class="key lang" id="key-AltRight">한/영</div>
+                            <!-- <div class="key alt" id="key-AltRight">Alt</div> -->
+                            <!-- <div class="key win" id="key-MetaRight">Win</div> -->
+                            <!-- <div class="key menu" id="key-Menu">Menu</div> -->
+                            <!-- <div class="key ctrl" id="key-Control">Ctrl</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <script src=" ../js/keyboard.js">
+                </script>
+            </body>
+
+            </html>
+            <!-- <canvas>
                 타자 치는 키보드와 손가락 실시간 확인
-            </canvas>
+            </canvas> -->
         </main>
     </section>
 
