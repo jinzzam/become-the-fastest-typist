@@ -83,13 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (keyElement.getAttribute('data-original') == null) {
                 if (keyElement === backSpaceKey) {
                     var sliceString = typeTextArea.textContent.substring(0, typeTextArea.textContent.length - 1);
-                    typeTextArea.textContent = sliceString;
+                    // typeTextArea.textContent = sliceString;
                 } else if (keyElement === spaceKey) {
-                    typeTextArea.textContent += ' ';
+                    // typeTextArea.textContent += ' ';
                 }
                 event.preventDefault();
             } else {
-                typeTextArea.textContent += keyElement.textContent;
+                // typeTextArea.textContent += keyElement.textContent;
+                typeTextArea.textContent[0].classList.add('match');
             }
 
 
