@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../css/keyboard.css">
-    <!-- <link href="../css/header-footer.css" rel="stylesheet"> -->
     <script src="../js/keyboard.js"></script>
     <script src="../js/jquery.js"></script>
     <title>타자 연습 프로그램</title>
@@ -23,19 +22,19 @@
 
         <div class="keyboard">
             <div class="keyboard-row">
-                <div class="key" id="key-Backquote" data-shift="~" data-original="`">`</div>
-                <div class="key" id="key-Digit1" data-shift="!" data-original="1">1</div>
-                <div class="key" id="key-Digit2" data-shift="@" data-original="2">2</div>
-                <div class="key" id="key-Digit3" data-shift="#" data-original="3">3</div>
-                <div class="key" id="key-Digit4" data-shift="$" data-original="4">4</div>
-                <div class="key" id="key-Digit5" data-shift="%" data-original="5">5</div>
-                <div class="key" id="key-Digit6" data-shift="^" data-original="6">6</div>
-                <div class="key" id="key-Digit7" data-shift="&" data-original="7">7</div>
-                <div class="key" id="key-Digit8" data-shift="*" data-original="8">8</div>
-                <div class="key" id="key-Digit9" data-shift="(" data-original="9">9</div>
-                <div class="key" id="key-Digit0" data-shift=")" data-original="0">0</div>
-                <div class="key" id="key-Minus" data-shift="_" data-original="-">-</div>
-                <div class="key" id="key-Equal" data-shift="+" data-original="=">=</div>
+                <div class="key" id="key-Backquote" data-special-symbol="~" data-original="`">`</div>
+                <div class="key" id="key-Digit1" data-special-symbol="!" data-original="1">1</div>
+                <div class="key" id="key-Digit2" data-special-symbol="@" data-original="2">2</div>
+                <div class="key" id="key-Digit3" data-special-symbol="#" data-original="3">3</div>
+                <div class="key" id="key-Digit4" data-special-symbol="$" data-original="4">4</div>
+                <div class="key" id="key-Digit5" data-special-symbol="%" data-original="5">5</div>
+                <div class="key" id="key-Digit6" data-special-symbol="^" data-original="6">6</div>
+                <div class="key" id="key-Digit7" data-special-symbol="&" data-original="7">7</div>
+                <div class="key" id="key-Digit8" data-special-symbol="*" data-original="8">8</div>
+                <div class="key" id="key-Digit9" data-special-symbol="(" data-original="9">9</div>
+                <div class="key" id="key-Digit0" data-special-symbol=")" data-original="0">0</div>
+                <div class="key" id="key-Minus" data-special-symbol="_" data-original="-">-</div>
+                <div class="key" id="key-Equal" data-special-symbol="+" data-original="=">=</div>
                 <div class="key backspace" id="key-Backspace">←</div>
             </div>
 
@@ -58,9 +57,9 @@
                 </div>
                 <div class="key kor" id="key-KeyP" data-shift="P" data-original="p" data-kor="ㅔ" data-kor-hard="ㅖ">p
                 </div>
-                <div class="key" id="key-BracketLeft" data-shift="{" data-original="[">[</div>
-                <div class="key" id="key-BracketRight" data-shift="}" data-original="]">]</div>
-                <div class="key backslash" id="key-Backslash" data-shift="|" data-original="\">\</div>
+                <div class="key" id="key-BracketLeft" data-special-symbol="{" data-original="[">[</div>
+                <div class="key" id="key-BracketRight" data-special-symbol="}" data-original="]">]</div>
+                <div class="key backslash" id="key-Backslash" data-special-symbol="|" data-original="\">\</div>
             </div>
 
             <div class="keyboard-row">
@@ -74,8 +73,8 @@
                 <div class="key kor" id="key-KeyJ" data-shift="J" data-original="j" data-kor="ㅓ">j</div>
                 <div class="key kor" id="key-KeyK" data-shift="K" data-original="k" data-kor="ㅏ">k</div>
                 <div class="key kor" id="key-KeyL" data-shift="L" data-original="l" data-kor="ㅣ">l</div>
-                <div class="key" id="key-Semicolon" data-shift=":" data-original=";">;</div>
-                <div class="key" id="key-Quote" data-shift='"' data-original="'">'</div>
+                <div class="key" id="key-Semicolon" data-special-symbol=":" data-original=";">;</div>
+                <div class="key" id="key-Quote" data-special-symbol='"' data-original="'">'</div>
                 <div class="key enter" id="key-Enter">Enter</div>
             </div>
 
@@ -88,9 +87,9 @@
                 <div class="key kor" id="key-KeyB" data-shift="B" data-original="b" data-kor="ㅠ">b</div>
                 <div class="key kor" id="key-KeyN" data-shift="N" data-original="n" data-kor="ㅜ">n</div>
                 <div class="key kor" id="key-KeyM" data-shift="M" data-original="m" data-kor="ㅡ">m</div>
-                <div class="key" id="key-Comma" data-shift="&lt;" data-original=",">,</div>
-                <div class="key" id="key-Period" data-shift=">" data-original=".">.</div>
-                <div class="key" id="key-Slash" data-shift="?" data-original="/">/</div>
+                <div class="key" id="key-Comma" data-special-symbol="&lt;" data-original=",">,</div>
+                <div class="key" id="key-Period" data-special-symbol=">" data-original=".">.</div>
+                <div class="key" id="key-Slash" data-special-symbol="?" data-original="/">/</div>
                 <div class="key shift" id="key-ShiftRight">Shift</div>
             </div>
 

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // const userInput = document.getElementById('user-input'); // 사용자 입력 필드 가져오기
 
 
-    let isShiftPressed = false;
+    let isShiftPressed = false; //shift키 눌림 여부 상태
     let isHangulMode = false; // 한글 모드 여부 상태
 
     // 키보드 레이아웃을 현재 상태(Shift, 한글/영어)에 맞춰 업데이트하는 함수
@@ -13,26 +13,33 @@ document.addEventListener('DOMContentLoaded', () => {
         keys.forEach(key => {
             let displayText = '';
 
+            // data-special-symbol 특수 기호 문자
             // data-original 속성이 없거나 한/영 키인 경우는 텍스트 변경 없이 원래 텍스트 유지
             if (!key.hasAttribute('data-original') || key.id === 'key-HangulMode' || key.id === 'key-Backspace' || key.id === 'key-Tab' || key.id === 'key-CapsLock' || key.id === 'key-Enter' || key.id.includes('Shift') || key.id.includes('Control') || key.id.includes('Meta') || key.id.includes('Alt') || key.id === 'key-ContextMenu' || key.id === 'key-Space') {
                 displayText = key.textContent;
             } else if (isHangulMode) {
                 // 한글 모드일 때
                 if (isShiftPressed) {
-                    // 된소리 (data-korean-shift) 또는 일반 한글 (data-korean)
-                    displayText = key.getAttribute('data-kor-hard');
+                    // 된소리 (data-kor-hard) 또는 일반 한글 (data-kor)
+                    displayText = key.getAttribute('data-kor-hard') || key.getAttribute('data-special-symbol');
                 } else {
-                    // 일반 한글 (data-korean)
+                    // 일반 한글 (data-kor)
                     displayText = key.getAttribute('data-kor');
+                    if(key.getAttribute('data-special-symbol') !== null){
+                        displayText = key.getAttribute('data-original');
+                    }
                 }
             } else if (!isHangulMode) {
                 // 영어 모드일 때
                 if (isShiftPressed) {
                     // Shifted 영어 (data-shift) 또는 일반 영어 (data-original)
-                    displayText = key.getAttribute('data-shift');
+                    displayText = key.getAttribute('data-shift') || key.getAttribute('data-special-symbol');
                 } else {
                     // 일반 영어 (data-original)
                     displayText = key.getAttribute('data-original');
+                    if(key.getAttribute('data-special-symbol') !== null){
+                        displayText = key.getAttribute('data-original');
+                    }
                 }
             }
             // null 값 방지 및 텍스트 업데이트
