@@ -53,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (displayText !== null && displayText !== undefined) {
                 key.textContent = displayText;
             }
-
-            // // 한/영 키의 활성화 상태 시각화
         });
+        // // 한/영 키의 활성화 상태 시각화
         if (isHangulMode) {
             hangulEngKey.classList.add('language-active');
         } else {
@@ -111,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
             updateKeyboardLayout(); // Shift 눌림 상태에 맞춰 키보드 텍스트 업데이트
         }
 
-        // Tab 눌림 상태에 맞춰 키보드 텍스트 업데이트
+        // capsLock 눌림 상태에 맞춰 키보드 텍스트 업데이트
+        // 영어 모드에서만 동작
         if (event.key === 'CapsLock' && !isHangulMode) {
             isCapsLockPressed = !isCapsLockPressed;
             updateKeyboardLayout();
