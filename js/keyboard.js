@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys = document.querySelectorAll('.key');
     // 한/영 키 요소를 ID로 직접 가져옵니다.
     const hangulEngKey = document.getElementById('key-HangulMode');
-    // const userInput = document.getElementById('user-input'); // 사용자 입력 필드 가져오기
-
+    const spaceKey = document.getElementById('key-Space');
+    const backSpaceKey = document.getElementById('key-Backspace');
+    const typeTextArea = document.getElementById('typeText');
 
     let isShiftPressed = false; //shift키 눌림 여부 상태
     let isHangulMode = false; // 한글 모드 여부 상태
+    let isCapsLockPressed = false;
 
     // 키보드 레이아웃을 현재 상태(Shift, 한글/영어)에 맞춰 업데이트하는 함수
     function updateKeyboardLayout() {
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     // 일반 한글 (data-kor)
                     displayText = key.getAttribute('data-kor');
-                    if(key.getAttribute('data-special-symbol') !== null){
+                    if (key.getAttribute('data-special-symbol') !== null) {
                         displayText = key.getAttribute('data-original');
                     }
                 }
@@ -34,10 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isShiftPressed) {
                     // Shifted 영어 (data-shift) 또는 일반 영어 (data-original)
                     displayText = key.getAttribute('data-shift') || key.getAttribute('data-special-symbol');
+                } else if (isCapsLockPressed) {
+                    displayText = key.getAttribute('data-shift');
+                    if (key.getAttribute('data-special-symbol')) {
+                        displayText = key.getAttribute('data-original');
+                    }
                 } else {
                     // 일반 영어 (data-original)
                     displayText = key.getAttribute('data-original');
-                    if(key.getAttribute('data-special-symbol') !== null){
+                    if (key.getAttribute('data-special-symbol') !== null) {
                         displayText = key.getAttribute('data-original');
                     }
                 }
@@ -73,6 +80,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const keyElement = document.getElementById(`key-${event.code}`);
         if (keyElement) {
             keyElement.classList.add('active');
+            // 문자가 아닌 제어 키를 눌렀을 때
+            if (keyElement.getAttribute('data-original') == null) {
+                if (keyElement === backSpaceKey) {
+                    var sliceString = typeTextArea.textContent.substring(0, typeTextArea.textContent.length - 1);
+                    typeTextArea.textContent = sliceString;
+                } else if (keyElement === spaceKey) {
+                    typeTextArea.textContent += ' ';
+                }
+                event.preventDefault();
+            } else {
+                typeTextArea.textContent += keyElement.textContent;
+            }
+
+
+            // if (keyElement === backSpaceKey) {
+            //     typeTextArea.textContent.slice(0, typeText.length - 1);
+            // }
+            // if (keyElement === spaceKey) {
+            //     typeText += ' ';
+            // }
+            // typeTextArea.textContent += typeText;
+
         }
 
         // 2. Shift 키 상태 변경 및 레이아웃 업데이트
@@ -80,6 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Shift' && !isShiftPressed) {
             isShiftPressed = true;
             updateKeyboardLayout(); // Shift 눌림 상태에 맞춰 키보드 텍스트 업데이트
+        }
+
+        // Tab 눌림 상태에 맞춰 키보드 텍스트 업데이트
+        if (event.key === 'CapsLock' && !isHangulMode) {
+            isCapsLockPressed = !isCapsLockPressed;
+            updateKeyboardLayout();
+            event.preventDefault();
         }
 
         // 3. 한/영 키 상태 변경 및 레이아웃 업데이트
@@ -104,6 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
             isShiftPressed = false;
             updateKeyboardLayout(); // Shift 떼짐 상태에 맞춰 키보드 텍스트 업데이트
         }
+        // if (event.key === 'Tab' && isTabPressed) {
+        //     isShiftPressed = false;
+        //     updateKeyboardLayout(); // Tab 떼짐 상태에 맞춰 키보드 텍스트 업데이트
+        // }
 
         // 3. 한/영 키 상태 변경 및 레이아웃 업데이트
         // 'HangulMode'는 한/영 키에 대한 표준 event.key 값입니다.
