@@ -1,4 +1,4 @@
-score = int(input("점수는?"))
+score = int(input("score?"))
 
 if score>=90 :
     grade="A"
@@ -11,4 +11,4 @@ elif score>=60 :
 else:
     grade="F"
 
-print("등급 : ", grade)
+print("grade : ", grade)
