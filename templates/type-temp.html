@@ -17,7 +17,7 @@
         <h1>두벌식 키보드 타자 연습</h1>
         <div class="typing-area">
             <p id="practice-text">안녕하세요. 타자 연습을 시작해볼까요?</p>
-            <h3 id="typeText">{{ practice_content }}</h3>
+            <pre id="typeText">{{ practice_content | join('<br>') | safe }}</pre>
         </div>
 
         <div class="keyboard">
