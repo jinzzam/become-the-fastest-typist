@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>var __ezHttpConsent = { setByCat: function (src, tagType, attributes, category, force, customSetScriptFn = null) { var setScript = function () { if (force || window.ezTcfConsent[category]) { if (typeof customSetScriptFn === 'function') { customSetScriptFn(); } else { var scriptElement = document.createElement(tagType); scriptElement.src = src; attributes.forEach(function (attr) { for (var key in attr) { if (attr.hasOwnProperty(key)) { scriptElement.setAttribute(key, attr[key]); } } }); var firstScript = document.getElementsByTagName(tagType)[0]; firstScript.parentNode.insertBefore(scriptElement, firstScript); } } }; if (force || (window.ezTcfConsent && window.ezTcfConsent.loaded)) { setScript(); } else if (typeof getEzConsentData === "function") { getEzConsentData().then(function (ezTcfConsent) { if (ezTcfConsent && ezTcfConsent.loaded) { setScript(); } else { console.error("cannot get ez consent data"); force = true; setScript(); } }); } else { force = true; setScript(); console.error("getEzConsentData is not a function"); } }, };</script>
+  <script>var ezTcfConsent = window.ezTcfConsent ? window.ezTcfConsent : { loaded: false, store_info: false, develop_and_improve_services: false, measure_ad_performance: false, measure_content_performance: false, select_basic_ads: false, create_ad_profile: false, select_personalized_ads: false, create_content_profile: false, select_personalized_content: false, understand_audiences: false, use_limited_data_to_select_content: false, }; function getEzConsentData() { return new Promise(function (resolve) { document.addEventListener("ezConsentEvent", function (event) { var ezTcfConsent = event.detail.ezTcfConsent; resolve(ezTcfConsent); }); }); }</script>
+  <script>if (typeof _setEzCookies !== 'function') { function _setEzCookies(ezConsentData) { var cookies = window.ezCookieQueue; for (var i = 0; i < cookies.length; i++) { var cookie = cookies[i]; if (ezConsentData && ezConsentData.loaded && ezConsentData[cookie.tcfCategory]) { document.cookie = cookie.name + "=" + cookie.value; } } } }
+    window.ezCookieQueue = window.ezCookieQueue || []; if (typeof addEzCookies !== 'function') { function addEzCookies(arr) { window.ezCookieQueue = [...window.ezCookieQueue, ...arr]; } }
+    addEzCookies([{ name: "ezopvc_251878", value: "12; Path=/; Domain=speedcoder.net; Expires=Sat, 16 Aug 2025 14:21:09 UTC", tcfCategory: "understand_audiences", isEzoic: "true", }, { name: "ezoab_251878", value: "mod126; Path=/; Domain=speedcoder.net; Max-Age=7200", tcfCategory: "store_info", isEzoic: "true", }, { name: "active_template::251878", value: "pub_site.1755352269; Path=/; Domain=speedcoder.net; Expires=Mon, 18 Aug 2025 13:51:09 UTC", tcfCategory: "store_info", isEzoic: "true", }, { name: "ezoadgid_251878", value: "-1; Path=/; Domain=speedcoder.net; Max-Age=1800", tcfCategory: "understand_audiences", isEzoic: "true", }, { name: "ezosuibasgeneris-1", value: "e7b2efc0-418a-479b-6f37-31f2ccfd90a1; Path=/; Domain=speedcoder.net; Expires=Sun, 16 Aug 2026 13:51:09 UTC; Secure; SameSite=None", tcfCategory: "understand_audiences", isEzoic: "true", }]); if (window.ezTcfConsent && window.ezTcfConsent.loaded) { _setEzCookies(window.ezTcfConsent); } else if (typeof getEzConsentData === "function") { getEzConsentData().then(function (ezTcfConsent) { if (ezTcfConsent && ezTcfConsent.loaded) { _setEzCookies(window.ezTcfConsent); } else { console.error("cannot get ez consent data"); _setEzCookies(window.ezTcfConsent); } }); } else { console.error("getEzConsentData is not a function"); _setEzCookies(window.ezTcfConsent); }</script>
+  <script type="text/javascript" data-ezscrex='false'
+    data-cfasync='false'>window._ezaq = Object.assign({ "edge_cache_status": 31, "edge_response_time": 433, "url": "https://www.speedcoder.net/lessons/py/1/" }, typeof window._ezaq !== "undefined" ? window._ezaq : {});</script>
+  <script type="text/javascript" data-ezscrex='false'
+    data-cfasync='false'>window._ezaq = Object.assign({ "ab_test_id": "mod126" }, typeof window._ezaq !== "undefined" ? window._ezaq : {}); window.__ez = window.__ez || {}; window.__ez.tf = {};</script>
+  <script data-ezscrex='false' data-cfasync='false'
+    data-pagespeed-no-defer>var __ez = __ez || {}; __ez.stms = Date.now(); __ez.evt = {}; __ez.script = {}; __ez.ck = __ez.ck || {}; __ez.template = {}; __ez.template.isOrig = false; __ez.queue = __ez.queue || function () { var e = 0, i = 0, t = [], n = !1, o = [], r = [], s = !0, a = function (e, i, n, o, r, s, a) { var l = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : window, d = this; this.name = e, this.funcName = i, this.parameters = null === n ? null : w(n) ? n : [n], this.isBlock = o, this.blockedBy = r, this.deleteWhenComplete = s, this.isError = !1, this.isComplete = !1, this.isInitialized = !1, this.proceedIfError = a, this.fWindow = l, this.isTimeDelay = !1, this.process = function () { f("... func = " + e), d.isInitialized = !0, d.isComplete = !0, f("... func.apply: " + e); var i = d.funcName.split("."), n = null, o = this.fWindow || window; i.length > 3 || (n = 3 === i.length ? o[i[0]][i[1]][i[2]] : 2 === i.length ? o[i[0]][i[1]] : o[d.funcName]), null != n && n.apply(null, this.parameters), !0 === d.deleteWhenComplete && delete t[e], !0 === d.isBlock && (f("----- F'D: " + d.name), m()) } }, l = function (e, i, t, n, o, r, s) { var a = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : window, l = this; this.name = e, this.path = i, this.async = o, this.defer = r, this.isBlock = t, this.blockedBy = n, this.isInitialized = !1, this.isError = !1, this.isComplete = !1, this.proceedIfError = s, this.fWindow = a, this.isTimeDelay = !1, this.isPath = function (e) { return "/" === e[0] && "/" !== e[1] }, this.getSrc = function (e) { return void 0 !== window.__ezScriptHost && this.isPath(e) && "banger.js" !== this.name ? window.__ezScriptHost + e : e }, this.process = function () { l.isInitialized = !0, f("... file = " + e); var i = this.fWindow ? this.fWindow.document : document, t = i.createElement("script"); t.src = this.getSrc(this.path), !0 === o ? t.async = !0 : !0 === r && (t.defer = !0), t.onerror = function () { var e = { url: window.location.href, name: l.name, path: l.path, user_agent: window.navigator.userAgent }; "undefined" != typeof _ezaq && (e.pageview_id = _ezaq.page_view_id); var i = encodeURIComponent(JSON.stringify(e)), t = new XMLHttpRequest; t.open("GET", "//g.ezoic.net/ezqlog?d=" + i, !0), t.send(), f("----- ERR'D: " + l.name), l.isError = !0, !0 === l.isBlock && m() }, t.onreadystatechange = t.onload = function () { var e = t.readyState; f("----- F'D: " + l.name), e && !/loaded|complete/.test(e) || (l.isComplete = !0, !0 === l.isBlock && m()) }, i.getElementsByTagName("head")[0].appendChild(t) } }, d = function (e, i) { this.name = e, this.path = "", this.async = !1, this.defer = !1, this.isBlock = !1, this.blockedBy = [], this.isInitialized = !0, this.isError = !1, this.isComplete = i, this.proceedIfError = !1, this.isTimeDelay = !1, this.process = function () { } }; function c(e, i, n, s, a, d, c, u, f) { var m = new l(e, i, n, s, a, d, c, f); !0 === u ? o[e] = m : r[e] = m, t[e] = m, h(m) } function h(e) { !0 !== u(e) && 0 != s && e.process() } function u(e) { if (!0 === e.isTimeDelay && !1 === n) return f(e.name + " blocked = TIME DELAY!"), !0; if (w(e.blockedBy)) for (var i = 0; i < e.blockedBy.length; i++) { var o = e.blockedBy[i]; if (!1 === t.hasOwnProperty(o)) return f(e.name + " blocked = " + o), !0; if (!0 === e.proceedIfError && !0 === t[o].isError) return !1; if (!1 === t[o].isComplete) return f(e.name + " blocked = " + o), !0 } return !1 } function f(e) { var i = window.location.href, t = new RegExp("[?&]ezq=([^&#]*)", "i").exec(i); "1" === (t ? t[1] : null) && console.debug(e) } function m() { ++e > 200 || (f("let's go"), p(o), p(r)) } function p(e) { for (var i in e) if (!1 !== e.hasOwnProperty(i)) { var t = e[i]; !0 === t.isComplete || u(t) || !0 === t.isInitialized || !0 === t.isError ? !0 === t.isError ? f(t.name + ": error") : !0 === t.isComplete ? f(t.name + ": complete already") : !0 === t.isInitialized && f(t.name + ": initialized already") : t.process() } } function w(e) { return "[object Array]" == Object.prototype.toString.call(e) } return window.addEventListener("load", (function () { setTimeout((function () { n = !0, f("TDELAY -----"), m() }), 5e3) }), !1), { addFile: c, addFileOnce: function (e, i, n, o, r, s, a, l, d) { t[e] || c(e, i, n, o, r, s, a, l, d) }, addDelayFile: function (e, i) { var n = new l(e, i, !1, [], !1, !1, !0); n.isTimeDelay = !0, f(e + " ...  FILE! TDELAY"), r[e] = n, t[e] = n, h(n) }, addFunc: function (e, n, s, l, d, c, u, f, m, p) { !0 === c && (e = e + "_" + i++); var w = new a(e, n, s, l, d, u, f, p); !0 === m ? o[e] = w : r[e] = w, t[e] = w, h(w) }, addDelayFunc: function (e, i, n) { var o = new a(e, i, n, !1, [], !0, !0); o.isTimeDelay = !0, f(e + " ...  FUNCTION! TDELAY"), r[e] = o, t[e] = o, h(o) }, items: t, processAll: m, setallowLoad: function (e) { s = e }, markLoaded: function (e) { if (e && 0 !== e.length) { if (e in t) { var i = t[e]; !0 === i.isComplete ? f(i.name + " " + e + ": error loaded duplicate") : (i.isComplete = !0, i.isInitialized = !0) } else t[e] = new d(e, !0); f("markLoaded dummyfile: " + t[e].name) } }, logWhatsBlocked: function () { for (var e in t) !1 !== t.hasOwnProperty(e) && u(t[e]) } } }(); __ez.evt.add = function (e, t, n) { e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent ? e.attachEvent("on" + t, n) : e["on" + t] = n() }, __ez.evt.remove = function (e, t, n) { e.removeEventListener ? e.removeEventListener(t, n, !1) : e.detachEvent ? e.detachEvent("on" + t, n) : delete e["on" + t] }; __ez.script.add = function (e) { var t = document.createElement("script"); t.src = e, t.async = !0, t.type = "text/javascript", document.getElementsByTagName("head")[0].appendChild(t) }; __ez.dot = {}; __ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=5', true, [], true, false, true, false); __ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-0&cb=dc112bb7ea', true, [], true, false, true, false); __ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-0&cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false); __ez.queue.addFile('/detroitchicago/birmingham.js', '/detroitchicago/birmingham.js?gcb=195-0&cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+  <script data-ezscrex="false" type="text/javascript"
+    data-cfasync="false">window._ezaq = Object.assign({ "ad_cache_level": 2, "adpicker_placement_cnt": 0, "ai_placeholder_cache_level": 2, "ai_placeholder_placement_cnt": 2, "domain": "speedcoder.net", "domain_id": 251878, "ezcache_level": 0, "ezcache_skip_code": 14, "has_bad_image": 0, "has_bad_words": 0, "is_sitespeed": 0, "lt_cache_level": 0, "response_size": 38238, "response_size_orig": 30180, "response_time_orig": 401, "template_id": 134, "url": "https://www.speedcoder.net/lessons/py/1/", "word_count": 569, "worst_bad_word_level": 0 }, typeof window._ezaq !== "undefined" ? window._ezaq : {}); __ez.queue.markLoaded('ezaqBaseReady');</script>
+  <link rel='preload' as='script' href='//securepubads.g.doubleclick.net/tag/js/gpt.js'>
+  <link rel='preload' as='script' href='//go.ezodn.com/hb/dall.js?cb=195-0-127'>
+  <script type="text/javascript">(function () {
+      function storageAvailable(type) {
+        var storage; try { storage = window[type]; var x = '__storage_test__'; storage.setItem(x, x); storage.removeItem(x); return true; }
+          catch (e) { return e instanceof DOMException && (e.code === 22 || e.code === 1014 || e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') && (storage && storage.length !== 0); }
+      }
+      function remove_ama_config() { if (storageAvailable('localStorage')) { localStorage.removeItem("google_ama_config"); } }
+      remove_ama_config()
+    })()</script>
+  <script type="text/javascript">var ezoicTestActive = true</script>
+  <script type="text/javascript">var _ez_send_requests_through_ezoic = true;</script>
+  <script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+    window.ezAnalyticsStatic = true;
+    window._ez_send_requests_through_ezoic = true;
+    function analyticsAddScript(script) {
+      var ezDynamic = document.createElement('script');
+      ezDynamic.type = 'text/javascript';
+      ezDynamic.innerHTML = script;
+      document.head.appendChild(ezDynamic);
+    }
+    function getCookiesWithPrefix() {
+      var allCookies = document.cookie.split(';');
+      var cookiesWithPrefix = {};
+
+      for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+          var prefix = arguments[j];
+          if (cookie.indexOf(prefix) === 0) {
+            var cookieParts = cookie.split('=');
+            var cookieName = cookieParts[0];
+            var cookieValue = cookieParts.slice(1).join('=');
+            cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+            break; // Once matched, no need to check other prefixes
+          }
+        }
+      }
+
+      return cookiesWithPrefix;
+    }
+    function productAnalytics() {
+      var d = { "pr": [6, 1], "aop": { "14": 0, "2": 0, "4": 134, "7": 0 }, "omd5": "9049a7b7d5026d22937632bf212bdfa4" };
+      d.u = _ezaq.url;
+      d.p = _ezaq.page_view_id;
+      d.v = _ezaq.visit_uuid;
+      d.ab = _ezaq.ab_test_id;
+      d.e = JSON.stringify(_ezaq);
+      d.ref = document.referrer;
+      d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+      if (typeof ez_utmParams !== 'undefined') {
+        d.utm = ez_utmParams;
+      }
+
+      var dataText = JSON.stringify(d);
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '//g.ezoic.net/ezais/analytics?cb=1', true);
+      xhr.onload = function () {
+        if (xhr.status != 200) {
+          return;
+        }
+
+        if (document.readyState !== 'loading') {
+          analyticsAddScript(xhr.response);
+          return;
+        }
+
+        var eventFunc = function () {
+          if (document.readyState === 'loading') {
+            return;
+          }
+          document.removeEventListener('readystatechange', eventFunc, false);
+          analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+      };
+      xhr.setRequestHeader('Content-Type', 'text/plain');
+      xhr.send(dataText);
+    }
+    __ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+  </script>
+  <script type="text/javascript" data-ezscrex="false" data-cfasync="false" async="">
+    function productEzoicAds() {
+      if (window.ezDisableAds === true) {
+        return;
+      }
+      window.google_reactive_ads_global_state = {
+        adCount: {},
+        floatingAdsStacking: { maxZIndexListeners: [], maxZIndexRestrictions: {}, nextRestrictionId: 0 },
+        messageValidationEnabled: false,
+        reactiveTypeDisabledByPublisher: {},
+        reactiveTypeEnabledInAsfe: {},
+        sideRailAvailableSpace: [],
+        sideRailOverlappableElements: [],
+        stateForType: {},
+        tagSpecificState: {},
+        wasPlaTagProcessed: true,
+        wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+        wasReactiveAdVisible: {},
+        wasReactiveTagRequestSent: true,
+        description: "Can't disable auto ads programmatically on the page, so here we are!"
+      };
+      var d = { "ab": "", "km": {}, "pv": "", "vu": "f0e09e3b-e5b3-4bbb-60b7-99f58b359182", "r": { "r": [{ "p": " ezoic_pub_ad_placeholder-125-sidebar-120x600-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-160x600-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-250x250-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-300x1050-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-300x250v4-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125, "h": 1050, "w": 300 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-300x250-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-300x600-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-300x250v2-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_pub_ad_placeholder-125-sidebar-120x600x2-125-nonexxxnonexxxxxxezmaxscaleval100 ", "s": 125 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-728x90-999998-nonexxxclearxxxblock ", "s": 320 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-468x60-999998-nonexxxclearxxxblock ", "s": 320 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-250x250-999998-nonexxxclearxxxblock ", "s": 320 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-300x250-999998-nonexxxclearxxxblock ", "s": 320, "h": 400, "w": 728 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-336x280-999998-nonexxxclearxxxblock ", "s": 320 }, { "p": " ezoic_ad_placeholder-under_first_paragraph-580x400-999998-nonexxxclearxxxblock ", "s": 320 }, { "p": " ezoic_ad_placeholder-bottom_of_page-728x90-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-468x60-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-250x250-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-300x250-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-336x280-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-970x250-999800-nonexxxclearxxxblock ", "s": 280 }, { "p": " ezoic_ad_placeholder-bottom_of_page-970x90-999800-nonexxxclearxxxblock ", "s": 280 }], "a": { "12": true, "125": true, "21": true, "280": true, "320": true, "4": true }, "g": -1, "l": { "0": 5, "1": 3, "2": 2, "3": 1, "4": -1, "5": -1 }, "m": { "0": 5, "1": 3, "2": 2, "3": 1, "4": -1, "5": -1 }, "v": 0, "ve": false, "hr": false, "sa": false }, "cr": "", "tid": 134, "tn": "pub_site", "url": "", "wc": 569, "ff": 1, "dhh": "" };
+      d.ab = _ezaq.ab_test_id;
+      d.pv = _ezaq.page_view_id;
+      d.vu = _ezaq.visit_uuid;
+      d.url = window.location.href;
+      var dynamicAddScript = function (script) {
+        if (window.ezFinishedStatic === true) {
+          console.error("attempted to load dynamic script again");
+          return;
+        }
+        var errorMessages = [];
+        function errorHandler(event) {
+          var errorObj = event.error;
+          if (errorObj && errorObj.stack && errorObj.stack.indexOf('dynamicAddScript') !== -1) {
+            var errorMessage = {
+              Message: event.message,
+              LineNo: event.lineno,
+              ColumnNo: event.colno,
+              Stack: errorObj.stack
+            };
+            errorMessages.push(errorMessage);
+          }
+
+          if (typeof window.onerror === 'function') {
+            window.onerror.apply(this, arguments);
+          }
+        }
+        window.addEventListener('error', errorHandler);
+
+        var ezDynamic = document.createElement('script');
+        ezDynamic.type = 'text/javascript';
+        ezDynamic.innerHTML = script;
+        document.head.appendChild(ezDynamic);
+
+        window.removeEventListener('error', errorHandler);
+        if (window.ezFinishedStatic !== true || typeof window.ezstaticerrors !== 'undefined') {
+          d.Script = script;
+          d.ErrorMessages = JSON.stringify(errorMessages);
+          d.ErrorStaticMessages = window.ezstaticerrors || '';
+          var dataTxt = JSON.stringify(d);
+          if (dataTxt.length > 0) {
+            var logXHR = new XMLHttpRequest();
+            logXHR.open('POST', '/ezais/log?cb=1', true);
+            logXHR.setRequestHeader('Content-Type', 'application/json');
+            logXHR.send(dataTxt);
+          }
+        }
+      };
+      var dataText = JSON.stringify(d);
+      if (dataText.length > 0) {
+        var startTime = Date.now() - __ez.stms;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/ezais/dynamic?cb=1', true);
+        xhr.onload = function () {
+          if (xhr.status != 200) {
+            return;
+          }
+
+          if (document.readyState !== 'loading') {
+            dynamicAddScript(xhr.response);
+            return;
+          }
+
+          var eventFunc = function () {
+            if (document.readyState === 'loading') {
+              return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            dynamicAddScript(xhr.response);
+          };
+
+          document.addEventListener('readystatechange', eventFunc, false);
+        };
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send(dataText);
+      }
+    }
+
+    function callDynamicAfterConsent() {
+      if (window.__tcfapi) {
+        window.__tcfapi("addEventListener", 2, function (tcdata, success) {
+          if (success) {
+            if (tcdata.gdprApplies == true) {
+              if (tcdata.eventStatus === "useractioncomplete" || tcdata.eventStatus === "tcloaded") {
+                __ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+              }
+            } else {
+              __ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+            }
+          }
+        });
+      } else {
+        __ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+      }
+    }
+
+
+    if (window.__tcfapi) {
+      callDynamicAfterConsent();
+    } else {
+      if (typeof window.ezCMPQueue !== "undefined") {
+        window.ezCMPQueue.push(callDynamicAfterConsent);
+      } else {
+        __ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+      }
+    }
+  </script>
+  <base href="https://www.speedcoder.net/lessons/py/1/" />
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VV6LN5X2TE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VV6LN5X2TE');
+  </script>
+
+  <script>
+    (function (c, s, q, u, a, r, e) {
+      c.hj = c.hj || function () { (c.hj.q = c.hj.q || []).push(arguments) };
+      c._hjSettings = { hjid: a };
+      r = s.getElementsByTagName('head')[0];
+      e = s.createElement('script');
+      e.async = true;
+      e.src = q + c._hjSettings.hjid + u;
+      r.appendChild(e);
+    })(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6492601);
+  </script>
+
+  <title>Python Program Typing Practice | SpeedCoder</title>
+
+  <!-- <meta http-equiv="pragma" content="no-cache" /> -->
+
+
+  <link rel="stylesheet" href="/static/CACHE/css/output.68bf6f0fe02c.css" type="text/css" />
+
+  <link rel="stylesheet" type="text/css" id="keyboard-theme-link" href="/static/css/keyboard-white.css" />
+  <link rel="stylesheet" href="/static/CACHE/css/output.f476d3d6b7c9.css" type="text/css" />
+
+  <link rel="stylesheet" href="/static/CACHE/css/output.f22263da4c13.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="/static/css/sticky-footer-navbar.css"> -->
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" crossorigin="anonymous" />
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css" crossorigin="anonymous" />
+  <!-- for social buttons -->
+  <link rel="stylesheet" href="/static/css/bootstrap-social.css" />
+
+
+  <!--need to include full font-awesome package-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <link rel="icon" href="/static/img/favicon.ico" type="image/gif" sizes="16x16" />
+  <meta charset="UTF-8" />
+  <!-- <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet" />
+
+  <!--for responsiveness-->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+
+  <meta name="description" content="Practice typing Python Program with real world Open Source Code" />
+
+
+  <meta name="keywords" content="typing test, typing practice, typing tutor, programmers typing" />
+
+
+  <style type="text/css">
+    span2 {
+      -ms-transform: rotate(20deg);
+      /* IE 9 */
+      -webkit-transform: rotate(20deg);
+      /* Safari */
+      transform: rotate(-120deg);
+      /* Standard syntax */
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js">
+  </script>
+
+  <script type='text/javascript'>
+    var ezoTemplate = 'pub_site';
+    var ezouid = '1';
+    var ezoFormfactor = '1';
+  </script>
+  <script data-ezscrex="false" type='text/javascript'>
+    var soc_app_id = '0';
+    var did = 251878;
+    var ezdomain = 'speedcoder.net';
+    var ezoicSearchable = 1;
+  </script>
+  <link rel='canonical' href='https://www.speedcoder.net/lessons/py/1/' />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span9 class="icon-bar"></span9>
+            <span9 class="icon-bar"></span9>
+            <span9 class="icon-bar"></span9>
+          </button>
+          <a href="/" style="color:#000" class="navbar-brand">
+            <span92>⚡</span92>
+            <span91 style="margin-left:10px;font-family:monospace;font-weight:bold">SpeedCoder</span91>
+          </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li id="lessons"><a href="/lessons/">Lessons</a></li>
+            <li id="race"><a
+                onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;race&#39;,&#39;clicked&#39;,&#39;hello&#39;,190)"
+                style="font-weight: bold" href="/race/">SpeedCoder Game</a></li>
+            <li id="tutor"><a href="https://www.typingtom.com/programming/typing-test/1m">Typing Test</a></li>
+            <li id="customcode"><a href="/customcode/">Upload Custom Code</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+
+
+            <li style="line-height: 20px; padding-top: 15px; margin-right: 2px;">
+              <span class="switch-wrapper">
+                <input type="checkbox" id="toggleThemeCheckBox" onclick="this.blur()" onchange="toggleTheme(this)" />
+                <label for="toggleThemeCheckBox" class="switch-label">
+                  <span class="slider"></span>
+                </label>
+                <span class="switch-text">Dark Theme</span>
+              </span>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle btn btn-default navbar-btn" data-toggle="dropdown"
+                style="margin-left:10px">
+
+
+                Guest
+
+
+                <span9 class="caret"></span9>
+              </button>
+
+              <ul class="dropdown-menu">
+
+                <li><a href="/loginview/">Login/Signup</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="visible-xs alert alert-danger">
+          Please open this page on a larger display
+        </div>
+        <div class="hidden-xs hidden-sm">
+          <div class="list-group">
+            <a href="/race/" class="list-group-item">🏇 Compete against other users</a>
+            <a href="https://www.typingtom.com/lessons" target="_blank" class="list-group-item">📖 Learn Touch
+              Typing</a>
+          </div>
+
+
+          <!-- Ezoic - left_sidebar_top - sidebar -->
+          <span id="ezoic-pub-ad-placeholder-125"></span><span data-ez-ph-id="125"></span>
+          <!-- End Ezoic - left_sidebar_top - sidebar -->
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <!-- message block -->
+
+        <!-- message block ends-->
+        <div id="main">def prepend_path(self, name: str, paths: List[str]) -&gt; None:
+          old_val = self.env.get(name)
+          paths = [p for p in paths if isdir(p)]
+          if not paths:
+          return
+          if old_val is not None:
+          new_val = &#39;:&#39;.join(itertools.chain(paths, [old_val]))
+          else:
+          new_val = &#39;:&#39;.join(paths)
+          self.env[name] = new_val</div>
+        <div id="transformScale" style="transform: scale(0.9); display: ">
+
+
+          <div id="keyboard" class="" style="border-top:solid #efefef">
+            <ul class="ul-style">
+              <li class="key key-96  keyr-126 dual fin-1 dbackquote">~<br />`</li>
+              <li class="key key-49  keyr-33  dual fin-1 num1">!<br />1</li>
+              <li class="key key-50  keyr-64  dual fin-2 num2">@<br />2</li>
+              <li class="key key-51  keyr-35  dual fin-3 num3">#<br />3</li>
+              <li class="key key-52  keyr-36  dual fin-4 num4">$<br />4</li>
+              <li class="key key-53  keyr-37  dual fin-4 num5">%<br />5</li>
+              <li class="key key-54  keyl-94  dual fin-7 num6">^<br />6</li>
+              <li class="key key-55  keyl-38  dual fin-7 num7">&amp;<br />7</li>
+              <li class="key key-56  keyl-42  dual fin-8 num8">*<br />8</li>
+              <li class="key key-57  keyl-40  dual fin-9 num9">(<br />9</li>
+              <li class="key key-48  keyl-41  dual fin-10 num0">)<br />0</li>
+              <li class="key key-45  keyl-95  dual fin-10 dash">_<br />-</li>
+              <li class="key key-61  keyl-43  dual fin-10 equal">+<br />=</li>
+              <li class="key key-8   keyd-def backspace fin-10">Backspace</li>
+              <li class="key key-def keyd-def tab fin-1">Tab</li>
+              <li class="key key-113 keyr-81  letter fin-1 q">Q</li>
+              <li class="key key-119 keyr-87  letter fin-2 w">W</li>
+              <li class="key key-101 keyr-69  letter fin-3 e">E</li>
+              <li class="key key-114 keyr-82  letter fin-4 r">R</li>
+              <li class="key key-116 keyr-84  letter fin-4 t">T</li>
+              <li class="key key-121 keyl-89  letter fin-7 y">Y</li>
+              <li class="key key-117 keyl-85  letter fin-7 u">U</li>
+              <li class="key key-105 keyl-73  letter fin-8 i">I</li>
+              <li class="key key-111 keyl-79  letter fin-9 o">O</li>
+              <li class="key key-112 keyl-80  letter fin-10 p">P</li>
+              <li class="key key-91  keyl-123 fin-10 openbigbrace">{<br />[</li>
+              <li class="key key-93  keyl-125 fin-10 closebigbrace">}<br />]</li>
+              <li class="key key-92  keyl-124 backslash fin-10">|<br />\</li>
+              <li class="key key-def keyd-def capslock fin-1">CapsLock</li>
+              <li class="key key-97  keyr-65  letter fin-1 a">A</li>
+              <li class="key key-115 keyr-83  letter fin-2 s">S</li>
+              <li class="key key-100 keyr-68  letter fin-3 d">D</li>
+              <li class="key key-102 keyr-70  letter fin-4 f">F</li>
+              <li class="key key-103 keyr-71  letter fin-4 g">G</li>
+              <li class="key key-104 keyl-72  letter fin-7 h">H</li>
+              <li class="key key-106 keyl-74  letter fin-7 j">J</li>
+              <li class="key key-107 keyl-75  letter fin-8 k">K</li>
+              <li class="key key-108 keyl-76  letter fin-9 l">L</li>
+              <li class="key key-59  keyl-58  fin-10 semicolon">:<br />;</li>
+              <li class="key key-39  keyl-34  fin-10 singleinvertedcomma">&#34;<br />&#39;</li>
+              <li class="key key-10  keyd-def enter fin-10">Enter</li>
+              <li class="key key-sl  keyd-def shift-left fin-1">Shift</li>
+              <li class="key key-122 keyr-90  letter fin-1 z">Z</li>
+              <li class="key key-120 keyd-88  letter fin-2 x">X</li>
+              <li class="key key-99  keyr-67  letter fin-3 c">C</li>
+              <li class="key key-118 keyr-86  letter fin-4 v">V</li>
+              <li class="key key-98  keyr-66  letter fin-4 b">B</li>
+              <li class="key key-110 keyl-78  letter fin-7 n">N</li>
+              <li class="key key-109 keyl-77  letter fin-7 m">M</li>
+              <li class="key key-44  keyl-60  dual fin-8 lt">&lt;<br />,</li>
+              <li class="key key-46  keyl-62  dual fin-9 gt">&gt;<br />.</li>
+              <li class="key key-47  keyl-63  dual fin-10 forwardslash">?<br />/</li>
+              <li class="key key-sr  keyd-def shift-right fin-10">Shift</li>
+              <li class="key key-def keyd-def ctrl fin-1-disable">Ctrl</li>
+              <li class="key key-def keyd-def fin-1-disable">Fn</li>
+              <li class="key key-def keyd-def fin-1-disable">win</li>
+              <li class="key key-def keyd-def fin-1-disable">Alt</li>
+              <li class="key key-32  keyd-def spacebar fin-6"></li>
+              <li class="key key-def keyd-def letter fin-10-disable">Alt</li>
+              <li class="key key-def keyd-def ctrl fin-10-disable">Ctrl</li>
+              <li class="key key-def keyd-def arrow fin-10-disable">←</li>
+              <li class="key key-def keyd-def arrow fin-10-disable">↓</li>
+              <li class="key key-def keyd-def arrow fin-10-disable">→</li>
+            </ul>
+          </div>
+
+
+
+
+          <div id="humanhands" class="myhands bottomDiv">
+            <div class="hand hand-left">
+              <div class="finger finger-1"></div>
+              <div class="finger finger-2"></div>
+              <div class="finger finger-3"></div>
+              <div class="finger finger-4"></div>
+              <div class="finger finger-5"></div>
+              <div class="dorsal left-dorsal"></div>
+            </div>
+
+            <div class="hand hand-right" style="margin-left: 35px">
+              <div class="finger finger-6"></div>
+              <div class="finger finger-7"></div>
+              <div class="finger finger-8"></div>
+              <div class="finger finger-9"></div>
+              <div class="finger finger-10"></div>
+              <div class="dorsal right-dorsal"></div>
+            </div>
+          </div>
+        </div>
+        <!-- transform style ends -->
+      </div>
+      <!--end of md 6 -->
+
+      <div class="col-md-2">
+        <!-- <div class="visible-xs alert alert-danger">Please open this page on a larger display</div> -->
+
+        <center>
+          <label style="color: gray">Time: </label>
+          <label id="minutes">00</label>:<label id="seconds">00</label>
+        </center>
+        <div class="btn-group" role="group" aria-label="...">
+
+          <a onclick="window.location.assign(window.location.href)" type="button"
+            class="btn btn-default btn-sm visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i>
+            Reload</a>
+        </div>
+
+        <div>
+          <br />
+
+        </div>
+
+        <br />
+
+        <div style="margin-top: 10px" class="hidden-xs hidden-sm">
+
+
+          <!-- Ezoic - sidebar_middle - sidebar_middle -->
+          <span id="ezoic-pub-ad-placeholder-108"></span>
+          <!-- End Ezoic - sidebar_middle - sidebar_middle -->
+        </div>
+        <!-- google ad ends -->
+
+        <br />
+        <div class="dropdown visible-lg visible-md" style="margin-bottom: 15px">
+          <button id="dropdownKlBtn" class="btn btn-default dropdown-toggle btn-xs" type="button" data-toggle="dropdown"
+            aria-labelledby="dropdownKlBtn">
+            <span id="title_kl">Keyboard Layout</span>
+            <span class="caret"></span>
+          </button>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownKlBtn">
+            <li id="qw"><a onclick="changelayout(&#39;qwerty&#39;)">QWERTY</a></li>
+            <li id="dv"><a onclick="changelayout(&#39;dvorak&#39;)">DVORAK</a></li>
+            <li id="cm"><a onclick="changelayout(&#39;colemak&#39;)">COLEMAK</a></li>
+          </ul>
+        </div>
+
+
+        <div class="dropdown visible-lg visible-md" style="margin-bottom:20px;">
+          <button class="btn btn-default dropdown-toggle btn-xs" type="button" data-toggle="dropdown">
+            <span91 id="title_fc">Forced Correction</span91>
+            <span4 class="caret"></span4>
+          </button>
+          <ul class="dropdown-menu">
+            <li id="fc_on"><a onclick="changefc(&#39;on&#39;)">ON</a></li>
+            <li id="fc_off"><a onclick="changefc(&#39;off&#39;)">OFF</a></li>
+          </ul>
+        </div>
+        <select style="font-size: 13px; display:" id="select-keyboard"
+          onchange="changeKeyboardTheme(this);$(this).blur();">
+          <option value="keyboard-default">Default Keyboard</option>
+          <option value="keyboard-black">Black Keyboard</option>
+          <option value="keyboard-white">White Keyboard</option>
+        </select>
+        <br />
+
+        <input type="checkbox" checked="" id="keyboardCheckBox" onclick="this.blur()" onchange="toggleKeyboard(this)" />
+        <label for="keyboardCheckBox"> Keyboard</label><br />
+      </div>
+
+      <!-- Modal -->
+      <style>
+        .btnfoc {
+          background-color: green;
+
+        }
+      </style>
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title">Lesson Summary</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+
+            </div>
+            <div class="modal-footer">
+
+
+
+              <a href="/lessons" type="button" class="btn btn-default">Home</a>
+
+              <a onclick="window.location.assign(window.location.href)" type="button" class="btn btn-default">Repeat
+                Lesson</a>
+
+
+
+              <button onclick="helloworld()" type="button" class="btn btn-default btnfoc" autofocus="">Next
+                Lesson</button>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- <div id="loading">
+            <img id="loading-image" src="/static/img/loader.gif" alt="Loading..." />
+        </div> -->
+    </div>
+    <!--row ends-->
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div id="lesson-summary" style="
+          display: none;
+          text-align: center;
+          background-color: #f5f5f5;
+          margin-top:10px;
+          padding: 5px;
+          padding-bottom: 10px;
+        ">
+          <h2>Lesson Summary</h2>
+          <div id="summary-body"></div>
+          <hr />
+          <a href="/lessons/" type="button" class="btn btn-primary">Home</a>
+
+          <a onclick="window.location.assign(window.location.href)" type="button" class="btn btn-primary">Repeat
+            Lesson</a>
+
+          <button onclick="helloworld()" type="button" class="btn btn-success btnfoc">
+            Next Lesson
+          </button>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <!--<hr />-->
+
+    <div class="row">
+      <!--second row begins-->
+      <div class="col-md-12">
+        <center>
+
+
+          <!-- Ezoic - mid_content - mid_content -->
+          <span id="ezoic-pub-ad-placeholder-106"></span>
+          <!-- End Ezoic - mid_content - mid_content -->
+        </center>
+      </div>
+    </div>
+    <!--second row ends-->
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div style="display: none" id="keyboard-mistakes">
+          <center>
+            <h3>Key Mistake Heatmap</h3>
+            <p>
+              All mistakes are shown whether corrected or not. Hover over the keys
+              for key details
+            </p>
+          </center>
+          <style>
+            table,
+            th,
+            td {
+              padding: 5px !important;
+            }
+          </style>
+
+          <div id="keyboard-heatmap" class="" style="border-top:solid #efefef">
+            <ul class="ul-style">
+              <li class="hm-key hm-key-96  hm-keyr-126 dual hm-fin-1 hm-dbackquote" data-toggle="popover">~<br />`</li>
+              <li class="hm-key hm-key-49  hm-keyr-33  dual hm-fin-1 num1" data-toggle="popover">!<br />1</li>
+              <li class="hm-key hm-key-50  hm-keyr-64  dual hm-fin-2 num2" data-toggle="popover">@<br />2</li>
+              <li class="hm-key hm-key-51  hm-keyr-35  dual hm-fin-3 num3" data-toggle="popover">#<br />3</li>
+              <li class="hm-key hm-key-52  hm-keyr-36  dual hm-fin-4 num4" data-toggle="popover">$<br />4</li>
+              <li class="hm-key hm-key-53  hm-keyr-37  dual hm-fin-4 num5" data-toggle="popover">%<br />5</li>
+              <li class="hm-key hm-key-54  hm-keyl-94  dual hm-fin-7 num6" data-toggle="popover">^<br />6</li>
+              <li class="hm-key hm-key-55  hm-keyl-38  dual hm-fin-7 num7" data-toggle="popover">&amp;<br />7</li>
+              <li class="hm-key hm-key-56  hm-keyl-42  dual hm-fin-8 num8" data-toggle="popover">*<br />8</li>
+              <li class="hm-key hm-key-57  hm-keyl-40  dual hm-fin-9 num9" data-toggle="popover">(<br />9</li>
+              <li class="hm-key hm-key-48  hm-keyl-41  dual hm-fin-10 num0" data-toggle="popover">)<br />0</li>
+              <li class="hm-key hm-key-45  hm-keyl-95  dual hm-fin-10 hm-dash" data-toggle="popover">_<br />-</li>
+              <li class="hm-key hm-key-61  hm-keyl-43  dual hm-fin-10 equal" data-toggle="popover">+<br />=</li>
+              <li class="hm-key hm-key-8   hm-keyd-def hm-backspace hm-fin-10" data-toggle="popover">Backspace</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-tab hm-fin-1" data-toggle="popover">Tab</li>
+              <li class="hm-key hm-key-113 hm-keyr-81  letter hm-fin-1 q" data-toggle="popover">Q</li>
+              <li class="hm-key hm-key-119 hm-keyr-87  letter hm-fin-2 w" data-toggle="popover">W</li>
+              <li class="hm-key hm-key-101 hm-keyr-69  letter hm-fin-3 e" data-toggle="popover">E</li>
+              <li class="hm-key hm-key-114 hm-keyr-82  letter hm-fin-4 r" data-toggle="popover">R</li>
+              <li class="hm-key hm-key-116 hm-keyr-84  letter hm-fin-4 t" data-toggle="popover">T</li>
+              <li class="hm-key hm-key-121 hm-keyl-89  letter hm-fin-7 y" data-toggle="popover">Y</li>
+              <li class="hm-key hm-key-117 hm-keyl-85  letter hm-fin-7 u" data-toggle="popover">U</li>
+              <li class="hm-key hm-key-105 hm-keyl-73  letter hm-fin-8 i" data-toggle="popover">I</li>
+              <li class="hm-key hm-key-111 hm-keyl-79  letter hm-fin-9 o" data-toggle="popover">O</li>
+              <li class="hm-key hm-key-112 hm-keyl-80  letter hm-fin-10 p" data-toggle="popover">P</li>
+              <li class="hm-key hm-key-91  hm-keyl-123 hm-fin-10 hm-openbigbrace" data-toggle="popover">{<br />[</li>
+              <li class="hm-key hm-key-93  hm-keyl-125 hm-fin-10 hm-closebigbrace" data-toggle="popover">}<br />]</li>
+              <li class="hm-key hm-key-92  hm-keyl-124 hm-backslash hm-fin-10" data-toggle="popover">|<br />\</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-capslock hm-fin-1" data-toggle="popover">CapsLock</li>
+
+              <li class="hm-key hm-key-97  hm-keyr-65  letter hm-fin-1 a" data-toggle="popover">A</li>
+              <li class="hm-key hm-key-115 hm-keyr-83  letter hm-fin-2 s" data-toggle="popover">S</li>
+              <li class="hm-key hm-key-100 hm-keyr-68  letter hm-fin-3 d" data-toggle="popover">D</li>
+              <li class="hm-key hm-key-102 hm-keyr-70  letter hm-fin-4 f" data-toggle="popover">F</li>
+              <li class="hm-key hm-key-103 hm-keyr-71  letter hm-fin-4 g" data-toggle="popover">G</li>
+              <li class="hm-key hm-key-104 hm-keyl-72  letter hm-fin-7 h" data-toggle="popover">H</li>
+              <li class="hm-key hm-key-106 hm-keyl-74  letter hm-fin-7 j" data-toggle="popover">J</li>
+              <li class="hm-key hm-key-107 hm-keyl-75  letter hm-fin-8 k" data-toggle="popover">K</li>
+              <li class="hm-key hm-key-108 hm-keyl-76  letter hm-fin-9 l" data-toggle="popover">L</li>
+              <li class="hm-key hm-key-59  hm-keyl-58  hm-fin-10 hm-semicolon" data-toggle="popover">:<br />;</li>
+              <li class="hm-key hm-key-39  hm-keyl-34  hm-fin-10 hm-singleinvertedcomma" data-toggle="popover">
+                &#34;<br />&#39;</li>
+              <li class="hm-key hm-keySingle-10  hm-keyd-def hm-enter hm-fin-10" data-toggle="popover">Enter</li>
+              <li class="hm-key hm-key-sl  hm-keyd-def hm-shift-left hm-fin-1" data-toggle="popover">Shift</li>
+              <li class="hm-key hm-key-122 hm-keyr-90  letter hm-fin-1 z" data-toggle="popover">Z</li>
+              <li class="hm-key hm-key-120 hm-keyr-88  letter hm-fin-2 x" data-toggle="popover">X</li>
+              <li class="hm-key hm-key-99  hm-keyr-67  letter hm-fin-3 c" data-toggle="popover">C</li>
+              <li class="hm-key hm-key-118 hm-keyr-86  letter hm-fin-4 v" data-toggle="popover">V</li>
+              <li class="hm-key hm-key-98  hm-keyr-66  letter hm-fin-4 b" data-toggle="popover">B</li>
+              <li class="hm-key hm-key-110 hm-keyl-78  letter hm-fin-7 n" data-toggle="popover">N</li>
+              <li class="hm-key hm-key-109 hm-keyl-77  letter hm-fin-7 m" data-toggle="popover">M</li>
+              <li class="hm-key hm-key-44  hm-keyl-60  dual hm-fin-8 lt" data-toggle="popover">&lt;<br />,</li>
+              <li class="hm-key hm-key-46  hm-keyl-62  dual hm-fin-9 gt" data-toggle="popover">&gt;<br />.</li>
+              <li class="hm-key hm-key-47  hm-keyl-63  dual hm-fin-10 forwardslash" data-toggle="popover">?<br />/</li>
+              <li class="hm-key hm-key-sr  hm-keyd-def hm-shift-right hm-fin-10" data-toggle="popover">Shift</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-ctrl hm-fin-1" data-toggle="popover">Ctrl</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-fin-1" data-toggle="popover">Fn</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-fin-1" data-toggle="popover">win</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-fin-1" data-toggle="popover">Alt</li>
+              <li class="hm-key hm-keySingle-32  hm-keyd-def hm-spacebar hm-fin-6" data-toggle="popover"></li>
+              <li class="hm-key hm-key-def hm-keyd-def letter hm-fin-10" data-toggle="popover">Alt</li>
+              <li class="hm-key hm-key-def hm-keyd-def letter hm-fin-10" data-toggle="popover">Ctrl</li>
+              <li class="hm-key hm-key-def hm-keyd-def letter hm-fin-10" data-toggle="popover">←</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-fin-10" data-toggle="popover">↓</li>
+              <li class="hm-key hm-key-def hm-keyd-def hm-ctrl hm-fin-10" data-toggle="popover">→</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <!--third row begins-->
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <br />
+        <div class="how-to-texts">
+          <!-- How to text starts-->
+
+          <div class="panel panel-default">
+            <div class="panel-heading"><b>How to Use?</b></div>
+
+            <ul class="list-group">
+              <li class="list-group-item">
+                Look at the program and start typing the same
+              </li>
+              <li class="list-group-item">
+                The keyboard on the screen shows where your fingers should be
+                placed highlighted keys are the assigned keys for the respective
+                finger
+              </li>
+              <li class="list-group-item">
+                After completing this program you can see your WPM (words per
+                minute), Accuracy and Keys with most mistakes
+              </li>
+            </ul>
+          </div>
+          <!-- How to text endss-->
+
+          <!-- How calulation is done -->
+
+          <div class="panel panel-default">
+            <div class="panel-heading"><b>Equations used</b></div>
+            <div class="panel-body">
+              <p>WPM tells how fast you type, considering mistakes</p>
+              <p>An uncorrected mistake per minute brings down your WPM by 1.</p>
+              <br /><span class="ezoic-autoinsert-ad ezoic-under_first_paragraph"></span><span
+                data-ez-ph-id="999998"></span>
+              <!-- <img src="/static/img/wpm.gif" alt="wpm" /> -->
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mi>WPM</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <mrow>
+                        <mo>[</mo>
+                        <mfrac>
+                          <mtext>all typed characters</mtext>
+                          <mn>5</mn>
+                        </mfrac>
+                        <mo>]</mo>
+                      </mrow>
+                      <mo>−</mo> <!-- minus sign -->
+                      <mtext>wrong typed characters</mtext>
+                    </mrow>
+                    <mtext>time (in minutes)</mtext>
+                  </mfrac>
+                </mrow>
+              </math>
+
+              <hr />
+              <p>
+                Accuracy defines percentage of correct typed character out of
+                total typed characters.
+              </p>
+              <br />
+              <!-- <img src="/static/img/accuracy.gif" alt="wpm" /> -->
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mi>Accuracy</mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mfrac>
+                      <mtext>correct typed characters</mtext>
+                      <mtext>total typed characters</mtext>
+                    </mfrac>
+                    <mo>×</mo> <!-- multiplication sign × -->
+                    <mn>100</mn>
+                  </mrow>
+                </mrow>
+              </math>
+
+            </div>
+          </div>
+
+          <!-- how calulation is done ends -->
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <!-- third row ends -->
+    <hr />
+    <center>
+      <div class="hidden-xs hidden-sm">
+
+      </div>
+    </center>
+    <div class="row">
+      <div class="col-md-4">
+        <div>
+          <h4 style="color: blueviolet">Why are group of keys highlighted?</h4>
+          In touch typing, every finger is assigned to a specific group of keys.
+          for example the left hand middle finger is supposed to hit keys:
+          <kbd>3</kbd> <kbd>E</kbd> <kbd>D</kbd> and <kbd>C</kbd> only.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <h4 style="color: blueviolet">What are keyboard layouts?</h4>
+          You must be familiar with QWERTY keyboard, as it is the most widely
+          used. But this is not the only layout used. Many people prefer to use
+          the Dvorak keyboard as it is designed to increase typing speed, decrease
+          errors and provide comfort. Colemak is also an alternative to QWERTY.
+          The QWERTZ layout is used in Germany, Austria and Switzerland. Many more
+          layouts are also available.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <h4 style="color: blueviolet">What is forced correction?</h4>
+          Forced correction does not let you proceed if you have typed the current
+          character wrong. you can only proceed if you correct your mistake.
+          Therefore it forces you to correct your mistake.
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- what is touch typing? -->
+  </div>
+  <!--container ends-->
+
+
+
+
+  <div style="min-height:150px">
+
+  </div>
+  <!-- Site footer -->
+  <span class="ezoic-autoinsert-ad ezoic-bottom_of_page"></span><span data-ez-ph-id="999800"></span>
+  <footer class="footer"
+    style="text-align:center; margin-top:10px;margin-bottom:30px;padding:15px 5px; border-top:solid #efefef">
+    <p>© 2025 <a class="siteLink" style="color:black;" href="//www.speedcoder.net">SpeedCoder</a>. All Rights Reserved.
+    </p>
+    <p>for any enquiry or suggestion please contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+        data-cfemail="630506060701020008231013060607000c0706114d0d0617">[email&#160;protected]</a></p>
+    <p><a href="https://www.facebook.com/speedcoder.net">Facebook</a> . <a
+        href="https://www.twitter.com/speed_coder">Twitter</a> | <a href="/privacy/">Privacy</a></p>
+  </footer>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/static/js/jquery-2.1.0.min.js"></script> <!-- jquery must be loaded first -->
+  <script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
+
+  <script src="/static/CACHE/js/output.ae7472af0e93.js"></script>
+  <script>
+    //copy from utils.js
+    function setCookie(cname, cvalue, exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function toggleTheme(element) {
+      // element.checked = !element.checked;
+      if (element.checked) {
+        setCookie("isDark", "true", 365);
+      } else {
+        setCookie("isDark", "false", 365);
+      }
+      location.reload();
+    }
+  </script>
+
+
+
+
+  <script src="/static/CACHE/js/output.23ca14b24946.js"></script>
+  <script src="/static/CACHE/js/output.994969e49526.js"></script>
+
+  <script src="/static/CACHE/js/output.15946e723f8d.js"></script>
+
+  <script src="/static/CACHE/js/output.40a9e8d88517.js"></script>
+
+
+
+
+
+  <span id="ezoic-pub-ad-placeholder-0"></span>
+  <script>!function () { function t(t, e) { (null == e || e > t.length) && (e = t.length); for (var r = 0, n = new Array(e); r < e; r++)n[r] = t[r]; return n } !function () { function e() { return document.querySelector('ins[data-anchor-shown="true"][data-anchor-status="displayed"]') } function r(t) { var e = t.querySelector("iframe"); e && requestAnimationFrame((function () { var r = parseFloat(getComputedStyle(e).height); isNaN(r) || t.style.setProperty("height", "".concat(r + 5, "px"), "important") })) } function n(t) { t.style.setProperty("width", "100%", "important"), t.style.maxWidth = "none" } function o(t) { var e = t.querySelector("iframe"); e && (e.style.setProperty("display", "block", "important"), e.style.setProperty("margin", "0 auto", "important")); var r = t.querySelector("[id$='__container__']"); r && r.style.setProperty("display", "contents", "important") } function a(e) { if (e) { var a = new WeakSet; a.has(e) || (a.add(e), new MutationObserver((function (a) { var i, u = function (e, r) { var n = "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"]; if (!n) { if (Array.isArray(e) || (n = function (e, r) { if (e) { if ("string" == typeof e) return t(e, r); var n = Object.prototype.toString.call(e).slice(8, -1); return "Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? t(e, r) : void 0 } }(e)) || r && e && "number" == typeof e.length) { n && (e = n); var o = 0, a = function () { }; return { s: a, n: function () { return o >= e.length ? { done: !0 } : { done: !1, value: e[o++] } }, e: function (t) { throw t }, f: a } } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.") } var i, u = !0, c = !1; return { s: function () { n = n.call(e) }, n: function () { var t = n.next(); return u = t.done, t }, e: function (t) { c = !0, i = t }, f: function () { try { u || null == n.return || n.return() } finally { if (c) throw i } } } }(a); try { for (u.s(); !(i = u.n()).done;) { var c = i.value; "style" === c.attributeName ? (r(e), n(e), o(e)) : "attributes" === c.type && "data-google-query-id" === c.attributeName && o(e) } } catch (t) { u.e(t) } finally { u.f() } })).observe(e, { attributes: !0, attributeFilter: ["style", "data-google-query-id"] })) } } !function () { var t = e(); if (t) return r(t), n(t), o(t), void a(t); var i = new MutationObserver((function () { var t = e(); t && (r(t), n(t), o(t), a(t), i.disconnect()) })); i.observe(document.body, { attributes: !0, subtree: !0, childList: !0 }) }() }() }();</script>
+  <script type='text/javascript' style='display:none;'
+    async>if (typeof window.__ez !== 'undefined' && window.__ez?.queue?.addFileOnce) { window.__ez.queue.addFileOnce('identity', 'https://go.ezodn.com/detroitchicago/indy.js?cb=64&gcb=0', true, [], true, false, false, true); } </script>
+  <script
+    data-cfasync="false">function _emitEzConsentEvent() { var customEvent = new CustomEvent("ezConsentEvent", { detail: { ezTcfConsent: window.ezTcfConsent }, bubbles: true, cancelable: true, }); document.dispatchEvent(customEvent); }
+      (function (window, document) {
+        function _setAllEzConsentTrue() { window.ezTcfConsent.loaded = true; window.ezTcfConsent.store_info = true; window.ezTcfConsent.develop_and_improve_services = true; window.ezTcfConsent.measure_ad_performance = true; window.ezTcfConsent.measure_content_performance = true; window.ezTcfConsent.select_basic_ads = true; window.ezTcfConsent.create_ad_profile = true; window.ezTcfConsent.select_personalized_ads = true; window.ezTcfConsent.create_content_profile = true; window.ezTcfConsent.select_personalized_content = true; window.ezTcfConsent.understand_audiences = true; window.ezTcfConsent.use_limited_data_to_select_content = true; window.ezTcfConsent.select_personalized_content = true; }
+        function _clearEzConsentCookie() { document.cookie = "ezCMPCookieConsent=tcf2;Domain=.speedcoder.net;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT"; }
+        _clearEzConsentCookie(); if (typeof window.__tcfapi !== "undefined") {
+          window.ezgconsent = false; var amazonHasRun = false; function _ezAllowed(tcdata, purpose) { return (tcdata.purpose.consents[purpose] || tcdata.purpose.legitimateInterests[purpose]); }
+          function _handleConsentDecision(tcdata) {
+            window.ezTcfConsent.loaded = true; if (!tcdata.vendor.consents["347"] && !tcdata.vendor.legitimateInterests["347"]) { window._emitEzConsentEvent(); return; }
+            window.ezTcfConsent.store_info = _ezAllowed(tcdata, "1"); window.ezTcfConsent.develop_and_improve_services = _ezAllowed(tcdata, "10"); window.ezTcfConsent.measure_content_performance = _ezAllowed(tcdata, "8"); window.ezTcfConsent.select_basic_ads = _ezAllowed(tcdata, "2"); window.ezTcfConsent.create_ad_profile = _ezAllowed(tcdata, "3"); window.ezTcfConsent.select_personalized_ads = _ezAllowed(tcdata, "4"); window.ezTcfConsent.create_content_profile = _ezAllowed(tcdata, "5"); window.ezTcfConsent.measure_ad_performance = _ezAllowed(tcdata, "7"); window.ezTcfConsent.use_limited_data_to_select_content = _ezAllowed(tcdata, "11"); window.ezTcfConsent.select_personalized_content = _ezAllowed(tcdata, "6"); window.ezTcfConsent.understand_audiences = _ezAllowed(tcdata, "9"); window._emitEzConsentEvent();
+          }
+          function _handleGoogleConsentV2(tcdata) {
+            if (!tcdata || !tcdata.purpose || !tcdata.purpose.consents) { return; }
+            var googConsentV2 = {}; if (tcdata.purpose.consents[1]) { googConsentV2.ad_storage = 'granted'; googConsentV2.analytics_storage = 'granted'; }
+            if (tcdata.purpose.consents[3] && tcdata.purpose.consents[4]) { googConsentV2.ad_personalization = 'granted'; }
+            if (tcdata.purpose.consents[1] && tcdata.purpose.consents[7]) { googConsentV2.ad_user_data = 'granted'; }
+            if (googConsentV2.analytics_storage == 'denied') { gtag('set', 'url_passthrough', true); }
+            gtag('consent', 'update', googConsentV2);
+          }
+          __tcfapi("addEventListener", 2, function (tcdata, success) {
+            if (!success || !tcdata) { window._emitEzConsentEvent(); return; }
+            if (!tcdata.gdprApplies) { _setAllEzConsentTrue(); window._emitEzConsentEvent(); return; }
+            if (tcdata.eventStatus === "useractioncomplete" || tcdata.eventStatus === "tcloaded") {
+              if (typeof gtag != 'undefined') { _handleGoogleConsentV2(tcdata); }
+              _handleConsentDecision(tcdata); if (tcdata.purpose.consents["1"] === true && tcdata.vendor.consents["755"] !== false) { window.ezgconsent = true; (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0; }
+              if (window.__ezconsent) { __ezconsent.setEzoicConsentSettings(ezConsentCategories); }
+              __tcfapi("removeEventListener", 2, function (success) { return null; }, tcdata.listenerId); if (!(tcdata.purpose.consents["1"] === true && _ezAllowed(tcdata, "2") && _ezAllowed(tcdata, "3") && _ezAllowed(tcdata, "4"))) { if (typeof __ez == "object" && typeof __ez.bit == "object" && typeof window["_ezaq"] == "object" && typeof window["_ezaq"]["page_view_id"] == "string") { __ez.bit.Add(window["_ezaq"]["page_view_id"], [new __ezDotData("non_personalized_ads", true),]); } }
+            }
+          });
+        } else { _setAllEzConsentTrue(); window._emitEzConsentEvent(); }
+      })(window, document);</script>
+</body>
+
+</html>
