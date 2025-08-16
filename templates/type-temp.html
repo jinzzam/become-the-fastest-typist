@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/keyboard.css') }}">
-    <script src="{{ url_for('static', filename='js/keyboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typing.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
     <title>타자 연습 프로그램</title>
 </head>
@@ -24,7 +24,7 @@
     <div id="original-text" style="display: none;">{{ practice_content }}</div>
 
     <!-- JavaScript 파일 연결 (body 태그가 끝나기 직전에 넣는 것이 좋습니다) -->
-    <script src="{{ url_for('static', filename='js/typing.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/typing.js') }}"></script> -->
 
         <div class="keyboard">
             <div class="keyboard-row">
