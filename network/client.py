@@ -2,7 +2,7 @@ import socket
 from _thread import *
 
 HOST = '192.168.45.217'
-PORT = 8080
+PORT = 5000
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))

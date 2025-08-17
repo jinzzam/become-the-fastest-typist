@@ -23,6 +23,18 @@
         <!-- Python에서 전달받은 원본 텍스트를 숨겨서 저장 -->
         <div id="original-text" style="display: none;">{{ practice_content }}</div>
 
+        <div>
+            <p>프로그래밍 언어</p>
+            <select name="language" id="language">
+                <option value="HTML" name="option1">HTML</option>
+                <option value="CSS" name="option2">CSS</option>
+                <option value="Javascript" name="option3">Javascript</option>
+                <option value="Jquery" name="option4">Jquery</option>
+                <option value="Python" name="option5">Python</option>
+                <option value="Java" name="option6" selected>Java</option>
+            </select>
+        </div>
+
         <div class="keyboard">
             <div class="keyboard-row">
                 <div class="key" id="key-Backquote" data-special-symbol="~" data-original="`">`</div>
