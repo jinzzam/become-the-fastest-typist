@@ -5,7 +5,7 @@ app = Flask(__name__)
 # 기본 페이지 라우트 (GET 요청)
 @app.route('/')
 def show_text():
-    file_content = "텍스트 파일을 찾을 수 없습니다. 'text/code-java.txt' 파일을 생성해주세요." # 기본 메시지
+    file_content = "텍스트 파일을 찾을 수 없습니다." # 기본 메시지
     try:
         # 'text' 디렉토리가 app.py와 같은 레벨에 있다고 가정합니다.
         with open("text/code-java.txt", "r", encoding="utf-8") as f:
@@ -32,16 +32,18 @@ def process_data():
         if data:
             # 여기서는 받은 데이터를 그대로 응답하지만, 실제로는 파일 읽기 등의 로직을 추가할 수 있습니다.
             # 예: 'data' 값에 따라 다른 텍스트 파일을 읽어 반환할 수 있습니다.
-            # file_to_read = f"text/{data}.txt"
-            # try:
-            #     with open(file_to_read, "r", encoding="utf-8") as f:
-            #         read_content = f.read()
-            #     return jsonify({'message': '성공적으로 처리되었습니다.', 'content': read_content})
-            # except FileNotFoundError:
-            #     return jsonify({'error': '해당 파일을 찾을 수 없습니다.'}), 404
+            print("data : ",data)
+            file_to_read = f"text/{data}.txt"
+            try:
+                with open(file_to_read, "r", encoding="utf-8") as f:
+                    read_content = f.read()
+                    render_template('type-temp.html', practice_content=read_content)
+                return jsonify({'message': '성공적으로 처리되었습니다.', 'content': read_content})
+            except FileNotFoundError:
+                return jsonify({'error': '해당 파일을 찾을 수 없습니다.'}), 404
 
-            processed_message = f"서버에서 '{data}' 데이터를 성공적으로 받았습니다."
-            return jsonify({'message': processed_message, 'received_data': data})
+            # processed_message = f"서버에서 '{data}' 데이터를 성공적으로 받았습니다."
+            # return jsonify({'message': processed_message, 'received_data': data})
         else:
             return jsonify({'error': '데이터가 전달되지 않았습니다.'}), 400
 
