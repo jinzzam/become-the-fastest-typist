@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, render_template_string
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -7,21 +7,20 @@ app = Flask(__name__)
 def show_text():
     file_content = "텍스트 파일을 찾을 수 없습니다." # 기본 메시지
     try:
-        # 'text' 디렉토리가 app.py와 같은 레벨에 있다고 가정합니다.
         with open("text/code-java.txt", "r", encoding="utf-8") as f:
             file_content = f.read()
     except FileNotFoundError:
-        # 파일이 없을 경우 콘솔에 에러 출력
+        # 파일이 없을 경우 
         print("Error: 'text/code-java.txt' 파일을 찾을 수 없습니다.")
     except Exception as e:
         # 기타 파일 읽기 오류 처리
         print(f"파일 읽기 중 오류 발생: {e}")
 
-    # 'templates' 폴더 안에 있는 'type-temp.html' 파일을 렌더링하고 내용을 전달합니다.
+    # 'templates' 폴더 안에 있는 'type-temp.html' 파일을 렌더링하고 내용을 전달
     return render_template('type-temp.html', practice_content=file_content)
 
 # 데이터를 처리할 새로운 POST 라우트 정의
-# 이 라우트는 jQuery AJAX에서 호출할 엔드포인트가 됩니다.
+# 이 라우트는 jQuery AJAX에서 호출할 엔드포인트
 @app.route('/process-data', methods=['POST'])
 def process_data():
     if request.method == 'POST':
@@ -30,8 +29,6 @@ def process_data():
         data = request.form.get('myData')
         characters=''
         if data:
-            # 여기서는 받은 데이터를 그대로 응답하지만, 실제로는 파일 읽기 등의 로직을 추가할 수 있습니다.
-            # 예: 'data' 값에 따라 다른 텍스트 파일을 읽어 반환할 수 있습니다.
             print("data : ",data)
             file_to_read = "text/" + data + ".txt"
             try:

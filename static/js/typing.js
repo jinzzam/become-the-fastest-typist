@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys = document.querySelectorAll('.key');
     const korean_keys = document.querySelectorAll('.kor');
     const hangulEngKey = document.getElementById('key-HangulMode');
-    originalTextElement = document.getElementById('original-text');
-    originalText = originalTextElement.innerText;
-    textDisplay = document.getElementById('text-display');
-    bodyText = textDisplay.innerText;
+    const originalTextElement = document.getElementById('original-text');
+    const originalText = originalTextElement.innerText;
+    const textDisplay = document.getElementById('text-display');
+    const bodyText = textDisplay.innerText;
 
     let isShiftPressed = false;
     let isHangulMode = false;
