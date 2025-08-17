@@ -76,8 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
         characters[currentIndex].classList.add('cursor');
     }
 
+    // ====================메시지 박스==============================
+    function showMessageBox(message) {
+        document.getElementById('messageContent').innerText = message;
+        document.getElementById('messageBox').style.display = 'block';
+    }
+    
     // --------- 이벤트 리스너 영역 ------------
-
+   
     // keydown 리스너에서 직접 문자를 처리하는 부분을 제거하고, 특수 키만 남김
     document.addEventListener('keydown', (event) => {
         const keyElement = document.getElementById(`key-${event.code}`);
@@ -180,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isCorrect = true;
         } else if (!isHangulMode && expectedChar === typedChar) {
             isCorrect = true;
-        } else if (isHangulMode && expectedChar === typedChar) { 
+        } else if (isHangulMode && expectedChar === typedChar) {
             isCorrect = true;
         }
 
@@ -225,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSpan = characters[currentIndex];
         currentSpan.classList.add('incorrect');
         currentSpan.classList.remove('correct');
-        currentSpan.classList.remove('expectedEnter');
     }
 
     updateKeyboardLayout();

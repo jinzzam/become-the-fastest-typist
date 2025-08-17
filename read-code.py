@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, render_template_string
 
 app = Flask(__name__)
 
@@ -28,22 +28,34 @@ def process_data():
         # 클라이언트에서 보낸 'myData' 값을 받습니다.
         # request.form.get()을 사용하여 키가 없을 때 오류 방지
         data = request.form.get('myData')
-
+        characters=''
         if data:
             # 여기서는 받은 데이터를 그대로 응답하지만, 실제로는 파일 읽기 등의 로직을 추가할 수 있습니다.
             # 예: 'data' 값에 따라 다른 텍스트 파일을 읽어 반환할 수 있습니다.
             print("data : ",data)
-            file_to_read = f"text/{data}.txt"
+            file_to_read = "text/" + data + ".txt"
             try:
                 with open(file_to_read, "r", encoding="utf-8") as f:
-                    read_content = f.read()
-                    render_template('type-temp.html', practice_content=read_content)
-                return jsonify({'message': '성공적으로 처리되었습니다.', 'content': read_content})
+                    read_content = f.readlines()
+                    characters = ''
+                    for line in read_content:
+                        for i in range(len(line)):
+                            char = line[i]
+                            if(char == '\n') :
+                                char = char + '↵\n'
+                            char = "<span>" + char + "</span>"
+                            # print("@#$%!@#$" + char)
+                            characters += char
+                            print(characters)
+                    
+
+                    render_template('type-temp.html', practice_content=characters)
+                    return jsonify({'message': '성공적으로 처리되었습니다.', 'content': characters})
             except FileNotFoundError:
                 return jsonify({'error': '해당 파일을 찾을 수 없습니다.'}), 404
 
-            # processed_message = f"서버에서 '{data}' 데이터를 성공적으로 받았습니다."
-            # return jsonify({'message': processed_message, 'received_data': data})
+            processed_message = f"서버에서 '{data}' 데이터를 성공적으로 받았습니다."
+            return jsonify({'message': processed_message, 'received_data': data})
         else:
             return jsonify({'error': '데이터가 전달되지 않았습니다.'}), 400
 
@@ -51,3 +63,19 @@ def process_data():
 if __name__ == '__main__':
     # 디버그 모드는 개발 중에만 사용하고, 프로덕션에서는 비활성화해야 합니다.
     app.run(debug=True)
+
+    #  const characters = response.content.split('').map(char => {
+    #                             const span = document.createElement('span');
+    #                             // Enter 키를 위한 시각적 표현
+    #                             if (char === '\n') {
+    #                                 span.innerText = '↵\n';
+    #                             } else {
+    #                                 span.innerText = char;
+    #                             }
+    #                             textDisplay.appendChild(span);
+    #                             return span;
+    #                         });
+
+    #                         if (characters.length > 0) {
+    #                             characters[currentIndex].classList.add('cursor');
+    #                         }
