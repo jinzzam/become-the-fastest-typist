@@ -169,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const currentSpan = characters[currentIndex];
         const expectedChar = currentSpan.innerText;
-        const expectedString = currentSpan;
         let isCorrect = false;
         let isEnter = false;
 
@@ -177,9 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
             isEnter = true;
         } else if (expectedChar === '\t' && typedChar === 'Tab') {
             isCorrect = true;
+        } else if (isHangulMode && expectedChar === ' ' && typedChar === 'Space') { /*key.id === 'key-Space'*/
+            isCorrect = true;
         } else if (!isHangulMode && expectedChar === typedChar) {
             isCorrect = true;
-        } else if (isHangulMode && expectedString === typedChar) {
+        } else if (isHangulMode && expectedChar === typedChar) { 
             isCorrect = true;
         }
 
