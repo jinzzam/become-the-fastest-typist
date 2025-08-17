@@ -6,21 +6,11 @@ app = Flask(__name__)
 def show_text():
 
     try:
-        with open("text/code-java.txt", "r", encoding="utf-8") as f:
-            # line_content=[]
-            # lines = f.readlines()
-            # for line in lines:
-            #     temp = line.replace("\n", "")
-            #     line_content.append(temp)
+        with open("text/test.txt", "r", encoding="utf-8") as f:
             file_content = f.read();
     except FileNotFoundError:
         file_content = "텍스트 파일을 찾을 수 없습니다. 파일생성해주세요."
-
-        # template = Template(template_string)
-        # file_content = {"file_content" : file_content}
-        # html_output = template.render(file_content)
-        # print('html : ',html_output)
-                
+        
     # 가공된 리스트를 템플릿으로 바로 전달
     return render_template('type-temp.html', practice_content = file_content)
 if __name__=='__main__':

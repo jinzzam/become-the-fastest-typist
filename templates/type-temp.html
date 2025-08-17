@@ -21,10 +21,7 @@
             </div>
         </div>
         <!-- Python에서 전달받은 원본 텍스트를 숨겨서 저장 -->
-    <div id="original-text" style="display: none;">{{ practice_content }}</div>
-
-    <!-- JavaScript 파일 연결 (body 태그가 끝나기 직전에 넣는 것이 좋습니다) -->
-    <!-- <script src="{{ url_for('static', filename='js/typing.js') }}"></script> -->
+        <div id="original-text" style="display: none;">{{ practice_content }}</div>
 
         <div class="keyboard">
             <div class="keyboard-row">
@@ -107,10 +104,10 @@
                 <div class="key hangul-eng" id="key-HangulMode" data-original="한/영">한/영</div>
                 <!-- Changed ID to match event.key 'HangulMode' directly -->
 
-                <!-- <div class="key alt" id="key-AltRight">Alt</div> -->
-                <!-- <div class="key win" id="key-MetaRight">Win</div>
-                            <div class="key menu" id="key-ContextMenu">Menu</div>
-                            <div class="key ctrl" id="key-ControlRight">Ctrl</div> -->
+                <!-- <div class="key alt" id="key-AltRight">Alt</div>
+                    <div class="key win" id="key-MetaRight">Win</div>
+                    <div class="key menu" id="key-ContextMenu">Menu</div>
+                    <div class="key ctrl" id="key-ControlRight">Ctrl</div> -->
             </div>
         </div>
     </div>

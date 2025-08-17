@@ -3,29 +3,43 @@
 
 /* CSS 변수 정의 (새로운 색상 팔레트) */
 :root {
-    --bg-light: #f5f7fa; /* 매우 밝은 배경 (거의 흰색) */
-    --bg-panel: #ffffff; /* 컨테이너/키보드 패널 배경 (순수 흰색) */
-    --key-default: #e6eaf0; /* 기본 키 색상 (밝은 회색) */
-    --key-pressed: #dae0e6; /* 눌렸을 때 키 색상 (약간 어두운 회색) */
-    --active-color: #3da2e4; /* 활성화/하이라이트 색상 (선명한 파란색) */
-    --accent-blue: #1a7aba; /* 한/영 활성화 등 강조 파란색 (약간 더 진한 파란색) */
-    --text-dark: #333333; /* 어두운 텍스트 색상 (가독성 높임) */
-    --shadow-soft: rgba(0, 0, 0, 0.08); /* 부드러운 그림자 */
-    --shadow-key-base: rgba(0, 0, 0, 0.25); /* 키 그림자 기본 (더 선명하게) */
-    --input-bg-light: #f8f8f8; /* 입력 필드 배경 */
-    --input-text-dark: #333333; /* 입력 필드 텍스트 */
+    --bg-light: #f5f7fa;
+    /* 매우 밝은 배경 (거의 흰색) */
+    --bg-panel: #ffffff;
+    /* 컨테이너/키보드 패널 배경 (순수 흰색) */
+    --key-default: #e6eaf0;
+    /* 기본 키 색상 (밝은 회색) */
+    --key-pressed: #dae0e6;
+    /* 눌렸을 때 키 색상 (약간 어두운 회색) */
+    --active-color: #3da2e4;
+    /* 활성화/하이라이트 색상 (선명한 파란색) */
+    --accent-blue: #1a7aba;
+    /* 한/영 활성화 등 강조 파란색 (약간 더 진한 파란색) */
+    --text-dark: #333333;
+    /* 어두운 텍스트 색상 (가독성 높임) */
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    /* 부드러운 그림자 */
+    --shadow-key-base: rgba(0, 0, 0, 0.25);
+    /* 키 그림자 기본 (더 선명하게) */
+    --input-bg-light: #f8f8f8;
+    /* 입력 필드 배경 */
+    --input-text-dark: #333333;
+    /* 입력 필드 텍스트 */
 }
 
 body {
-    background-color: var(--bg-light); /* 배경색 적용 */
-    color: var(--text-dark); /* 기본 텍스트 색상 */
+    background-color: var(--bg-light);
+    /* 배경색 적용 */
+    color: var(--text-dark);
+    /* 기본 텍스트 색상 */
     font-family: 'Inter', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 10px; /* 전체 패딩 더 줄임 */
+    padding: 10px;
+    /* 전체 패딩 더 줄임 */
     box-sizing: border-box;
     line-height: 1.6;
 }
@@ -34,50 +48,46 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 700px; /* 전체 컨테이너 최대 너비 더 줄임 */
+    max-width: 700px;
+    /* 전체 컨테이너 최대 너비 더 줄임 */
     width: 100%;
-    padding: 15px; /* 패딩 더 줄임 */
-    background-color: var(--bg-panel); /* 컨테이너 배경색 */
-    border-radius: 12px; /* 모서리 둥글기 약간 줄임 */
-    box-shadow: 0 8px 18px var(--shadow-soft); /* 그림자 부드럽게 유지 */
-    border: 1px solid rgba(0, 0, 0, 0.05); /* 미묘한 경계선 */
-}
-
-h1 {
-    color: var(--text-dark);
-    margin-bottom: 15px; /* 마진 더 줄임 */
-    font-size: 2.0em; /* 제목 크기 더 줄임 */
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-weight: 700;
+    padding: 15px;
+    /* 패딩 더 줄임 */
+    background-color: var(--bg-panel);
+    /* 컨테이너 배경색 */
+    border-radius: 12px;
+    /* 모서리 둥글기 약간 줄임 */
+    box-shadow: 0 8px 18px var(--shadow-soft);
+    /* 그림자 부드럽게 유지 */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* 미묘한 경계선 */
 }
 
 .typing-area {
     width: 100%;
-    background-color: var(--input-bg-light); /* 입력 영역 배경 */
-    padding: 15px; /* 패딩 더 줄임 */
-    border-radius: 8px; /* 모서리 둥글기 더 줄임 */
+    background-color: var(--input-bg-light);
+    /* 입력 영역 배경 */
+    padding: 15px;
+    /* 패딩 더 줄임 */
+    border-radius: 8px;
+    /* 모서리 둥글기 더 줄임 */
     box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1), 0 5px 12px var(--shadow-soft);
-    margin-bottom: 20px; /* 마진 더 줄임 */
+    margin-bottom: 20px;
+    /* 마진 더 줄임 */
     text-align: center;
     border: 1px solid #ccc;
     /* rgba(0, 0, 0, 0.08); */
-}
-
-
-#practice-text {
-    font-size: 1.3em; /* 연습 텍스트 크기 더 줄임 */
-    color: var(--text-dark);
-    margin-bottom: 12px; /* 마진 더 줄임 */
-    line-height: 1.5;
 }
 
 pre {
     margin: 0;
     font-size: 1.2em;
     font-family: "Funnel Display";
-    white-space: pre-wrap; /* 자동 줄바꿈을 위해 필요 */
+    white-space: pre-wrap;
+    /* 자동 줄바꿈을 위해 필요 */
     word-wrap: break-word;
-    text-align: left; /* 왼쪽 정렬 */
+    text-align: left;
+    /* 왼쪽 정렬 */
     letter-spacing: 1.3px;
 }
 
@@ -86,37 +96,18 @@ pre span {
     padding: 2px 0;
 }
 
-/* 현재 입력해야 할 글자 (커서) */
-.cursor {
-    background-color: #d1eaff; /* 연한 파란색 배경 */
-    border-radius: 2px;
-}
-
-/* 맞게 입력한 글자 */
-.correct {
-    color: #349b34; /* 초록색 */
-}
-
-/* 틀리게 입력한 글자 */
-.incorrect {
-    color: white;
-    background-color: #de3f4fbb; /* 빨간색 배경 */
-    border-radius: 2px;
-}
-
-.expectedEnter {
-    background-color: #e8f4fe8f;
-    color: rgb(243, 211, 33);
-    border-radius: 2px;
-}
-
 /* 키보드 레이아웃 스타일 */
 .keyboard {
-    background-color: var(--bg-panel); /* 키보드 배경 */
-    padding: 15px; /* 패딩 더 줄임 */
-    border-radius: 12px; /* 모서리 둥글기 더 줄임 */
-    box-shadow: 0 6px 15px var(--shadow-soft); /* 그림자 더 줄임 */
-    margin-top: 20px; /* 마진 더 줄임 */
+    background-color: var(--bg-panel);
+    /* 키보드 배경 */
+    padding: 15px;
+    /* 패딩 더 줄임 */
+    border-radius: 12px;
+    /* 모서리 둥글기 더 줄임 */
+    box-shadow: 0 6px 15px var(--shadow-soft);
+    /* 그림자 더 줄임 */
+    margin-top: 20px;
+    /* 마진 더 줄임 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,39 +116,79 @@ pre span {
 
 .keyboard-row {
     display: flex;
-    gap: 6px; /* 키 간격 더 줄임 */
-    margin-bottom: 6px; /* 마진 더 줄임 */
+    gap: 6px;
+    /* 키 간격 더 줄임 */
+    margin-bottom: 6px;
+    /* 마진 더 줄임 */
 }
 
 .key {
-    width: 50px; /* 키 크기 더 줄임 */
-    height: 50px; /* 키 크기 더 줄임 */
+    width: 50px;
+    /* 키 크기 더 줄임 */
+    height: 50px;
+    /* 키 크기 더 줄임 */
     background-color: var(--key-default);
     color: var(--text-dark);
-    border-radius: 8px; /* 모서리 둥글기 더 줄임 */
+    border-radius: 8px;
+    /* 모서리 둥글기 더 줄임 */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em; /* 폰트 크기 더 줄임 */
+    font-size: 1.1em;
+    /* 폰트 크기 더 줄임 */
     cursor: pointer;
-    box-shadow: 0 4px 0 var(--shadow-key-base); /* 쫀득한 타건감을 위한 그림자  */
-    transition: all 0.1s ease-out; /* 부드러운 전환 효과 */
+    box-shadow: 0 4px 0 var(--shadow-key-base);
+    /* 타건감을 위한 그림자  */
+    transition: all 0.1s ease-in-out;
+    /* 부드러운 전환 효과 */
     user-select: none;
     font-weight: 600;
 }
 
-/* 쫀득한 타건 효과 */
+/* 타건 효과 */
 .key:active {
-    transform: translateY(2px); /* 눌리는 효과 픽셀 조정 */
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15); /* 눌렸을 때 그림자 변화 (더 평평하게) */
+    transform: translateY(2px);
+    /* 눌리는 효과 픽셀 조정 */
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+    /* 눌렸을 때 그림자 변화 (더 평평하게) */
     background-color: var(--key-pressed);
 }
 
 /* 사용자가 누른 키 시각화 (하이라이트) */
 .key.active {
     background-color: var(--active-color);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); /* 활성화된 키 그림자 더 줄임 */
-    transform: translateY(0); /* active 시 눌림 효과 제거 */
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    /* 활성화된 키 그림자 더 줄임 */
+    transform: translateY(0);
+    /* active 시 눌림 효과 제거 */
+}
+
+/* 현재 입력해야 할 글자 (커서) */
+.cursor {
+    background-color: #d1eaff;
+    /* 연한 파란색 배경 */
+    border-radius: 2px;
+}
+
+/* 맞게 입력한 글자 */
+.correct {
+    color: #349b34;
+    /* 초록색 */
+}
+
+/* 틀리게 입력한 글자 */
+.incorrect {
+    color: white;
+    background-color: #de3f4fbb;
+    /* 빨간색 배경 */
+    border-radius: 2px;
+}
+
+/* 엔터 올바르게 치면 */
+.expectedEnter {
+    background-color: #e8f4fe8f;
+    color: rgb(243, 211, 33);
+    border-radius: 2px;
 }
 
 /* 한/영 키의 활성화 상태 */
@@ -167,9 +198,32 @@ pre span {
 }
 
 /* 특수키 너비 조정 */
-.backspace { width: 75px; } /* 너비 조정 */
-.caps { width: 90px; } /* 너비 조정 */
-.tab { width: 80px; } /* 너비 조정 */
-.shift { width: 110px; } /* 너비 조정 */
-.enter { width: 100px; } /* 너비 조정 */
-.space { flex-grow: 1; width: 340px; } /* 더 유연하고 최대 너비 줄임 */
+.backspace {
+    width: 75px;
+}
+
+/* 너비 조정 */
+.caps {
+    width: 90px;
+}
+
+/* 너비 조정 */
+.tab {
+    width: 80px;
+}
+
+/* 너비 조정 */
+.shift {
+    width: 110px;
+}
+
+/* 너비 조정 */
+.enter {
+    width: 100px;
+}
+
+/* 너비 조정 */
+.space {
+    flex-grow: 1;
+    width: 340px;
+}
