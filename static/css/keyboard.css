@@ -32,16 +32,16 @@ body {
     /* 배경색 적용 */
     color: var(--text-dark);
     /* 기본 텍스트 색상 */
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: "Funnel Display";
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 634px;
+    min-width: 836px;
     margin: 0;
-    padding: 10px;
-    /* 전체 패딩 더 줄임 */
+    padding: 5px;
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .container {
@@ -49,18 +49,15 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 700px;
+    max-height: 800px;
     /* 전체 컨테이너 최대 너비 더 줄임 */
-    width: 100%;
-    padding: 15px;
-    /* 패딩 더 줄임 */
+    width: 75%;
+    padding: 7px;
     background-color: var(--bg-panel);
     /* 컨테이너 배경색 */
     border-radius: 12px;
-    /* 모서리 둥글기 약간 줄임 */
     box-shadow: 0 8px 18px var(--shadow-soft);
-    /* 그림자 부드럽게 유지 */
     border: 1px solid rgba(0, 0, 0, 0.05);
-    /* 미묘한 경계선 */
 }
 
 /* 커스텀 메시지 박스 스타일 */
@@ -85,18 +82,15 @@ body {
     margin-top: 15px;
     padding: 10px 20px;
     background-color: #3B82F6;
-    /* Tailwind blue-500 */
     color: white;
     border: none;
     border-radius: 0.375rem;
-    /* Tailwind rounded-md */
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .message-box button:hover {
     background-color: #2563EB;
-    /* Tailwind blue-600 */
 }
 
 .wrap_dropdown select {
@@ -105,19 +99,18 @@ body {
 
 .typing-area {
     width: 100%;
+    height: 270px;
+    padding: 7px;
+    padding-left: 10px;
     background-color: var(--input-bg-light);
     /* 입력 영역 배경 */
-    padding: 15px;
-    /* 패딩 더 줄임 */
     border-radius: 8px;
-    /* 모서리 둥글기 더 줄임 */
     box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1), 0 5px 12px var(--shadow-soft);
-    margin-bottom: 20px;
-    /* 마진 더 줄임 */
     text-align: center;
     border: 1px solid #ccc;
     /* rgba(0, 0, 0, 0.08); */
 }
+
 
 pre {
     margin: 0;
@@ -129,6 +122,7 @@ pre {
     text-align: left;
     /* 왼쪽 정렬 */
     letter-spacing: 1.3px;
+    z-index: 2;
 }
 
 /* 각 글자를 감싸는 span의 기본 스타일 */
@@ -140,14 +134,9 @@ pre span {
 .keyboard {
     background-color: var(--bg-panel);
     /* 키보드 배경 */
-    padding: 15px;
-    /* 패딩 더 줄임 */
+    padding: 5px;
     border-radius: 12px;
-    /* 모서리 둥글기 더 줄임 */
     box-shadow: 0 6px 15px var(--shadow-soft);
-    /* 그림자 더 줄임 */
-    margin-top: 20px;
-    /* 마진 더 줄임 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,6 +164,7 @@ pre span {
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
+    font-family: "Funnel Display";
     /* 폰트 크기 더 줄임 */
     cursor: pointer;
     box-shadow: 0 4px 0 var(--shadow-key-base);
@@ -190,7 +180,6 @@ pre span {
     transform: translateY(2px);
     /* 눌리는 효과 픽셀 조정 */
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
-    /* 눌렸을 때 그림자 변화 (더 평평하게) */
     background-color: var(--key-pressed);
 }
 
@@ -198,7 +187,6 @@ pre span {
 .key.active {
     background-color: var(--active-color);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-    /* 활성화된 키 그림자 더 줄임 */
     transform: translateY(0);
     /* active 시 눌림 효과 제거 */
 }
@@ -226,8 +214,9 @@ pre span {
 
 /* 엔터 올바르게 치면 */
 .expectedEnter {
-    background-color: #e8f4fe8f;
-    color: rgb(243, 211, 33);
+    background-color: #c1d1de;
+    color: rgb(253, 253, 22);
+    font-weight: 1300;
     border-radius: 2px;
 }
 
