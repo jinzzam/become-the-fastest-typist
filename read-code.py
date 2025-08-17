@@ -45,10 +45,7 @@ def process_data():
                                 char = '↵' + char
                             
                             char = "<span>" + char + "</span>"
-                            # print("@#$%!@#$" + char)
                             characters += char
-                            print(characters)
-                    
 
                     render_template('type-temp.html', practice_content=characters)
                     return jsonify({'message': '성공적으로 처리되었습니다.', 'content': characters})
@@ -65,18 +62,5 @@ if __name__ == '__main__':
     # 디버그 모드는 개발 중에만 사용하고, 프로덕션에서는 비활성화해야 합니다.
     app.run(debug=True)
 
-    #  const characters = response.content.split('').map(char => {
-    #                             const span = document.createElement('span');
-    #                             // Enter 키를 위한 시각적 표현
-    #                             if (char === '\n') {
-    #                                 span.innerText = '↵\n';
-    #                             } else {
-    #                                 span.innerText = char;
-    #                             }
-    #                             textDisplay.appendChild(span);
-    #                             return span;
-    #                         });
 
-    #                         if (characters.length > 0) {
-    #                             characters[currentIndex].classList.add('cursor');
-    #                         }
+    

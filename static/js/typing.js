@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys = document.querySelectorAll('.key');
     const korean_keys = document.querySelectorAll('.kor');
     const hangulEngKey = document.getElementById('key-HangulMode');
-    const textDisplay = document.getElementById('text-display');
-    const originalTextElement = document.getElementById('original-text');
-    const originalText = originalTextElement.innerText;
+    originalTextElement = document.getElementById('original-text');
+    originalText = originalTextElement.innerText;
+    textDisplay = document.getElementById('text-display');
+    bodyText = textDisplay.innerText;
 
     let isShiftPressed = false;
     let isHangulMode = false;
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------
 
     // 텍스트를 한 글자씩 <span>으로 감싸서 화면에 표시
-    const characters = originalText.split('').map(char => {
+    characters = originalText.split('').map(char => {
         const span = document.createElement('span');
         // Enter 키를 위한 시각적 표현
         if (char === '\n') {
@@ -71,9 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         textDisplay.appendChild(span);
         return span;
     });
+    bodyText = characters;
 
-    if (characters.length > 0) {
-        characters[currentIndex].classList.add('cursor');
+    if (bodyText.length > 0) {
+        bodyText[currentIndex].classList.add('cursor');
     }
 
     // ====================메시지 박스==============================
@@ -81,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('messageContent').innerText = message;
         document.getElementById('messageBox').style.display = 'block';
     }
-    
+
     // --------- 이벤트 리스너 영역 ------------
-   
+
     // keydown 리스너에서 직접 문자를 처리하는 부분을 제거하고, 특수 키만 남김
     document.addEventListener('keydown', (event) => {
         const keyElement = document.getElementById(`key-${event.code}`);
@@ -115,11 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
         } else if (event.key === 'Backspace') {
             if (currentIndex > 0) {
-                const prevSpan = characters[currentIndex - 1];
+                const prevSpan = bodyText[currentIndex - 1];
                 prevSpan.classList.remove('correct', 'incorrect');
-                characters[currentIndex].classList.remove('cursor');
+                bodyText[currentIndex].classList.remove('cursor');
                 currentIndex -= 1;
-                characters[currentIndex].classList.add('cursor');
+                bodyText[currentIndex].classList.add('cursor');
             }
             event.preventDefault();
         } else if (event.key === 'Enter') {
@@ -128,9 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (event.key === 'Tab') {
             handleInput('Tab');
             event.preventDefault();
+        } else if (event.key === 'Space') {
+            handleInput('Space');
+            event.preventDefault();
         }
 
+        // if (event.keyCode === 32) {
+        //     event.preventDefault();
+        //     //기능구현
+        // }
+
         handleInput(event.key);
+
+        scrollToCurrentChar();
     });
 
     document.addEventListener('keyup', (event) => {
@@ -171,9 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------------로직함수 ----------------------------
     function handleInput(typedChar) {
-        if (currentIndex > characters.length) return;
+        if (currentIndex > bodyText.length) return;
 
-        const currentSpan = characters[currentIndex];
+        const currentSpan = bodyText[currentIndex];
         const expectedChar = currentSpan.innerText;
         let isCorrect = false;
         let isEnter = false;
@@ -182,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
             isEnter = true;
         } else if (expectedChar === '\t' && typedChar === 'Tab') {
             isCorrect = true;
+        } else if (expectedChar === ' ' && typedChar === 'Space') {
+            isCorrect = true;
+            preventDefault();
         } else if (isHangulMode && expectedChar === ' ' && typedChar === 'Space') { /*key.id === 'key-Space'*/
             isCorrect = true;
         } else if (!isHangulMode && expectedChar === typedChar) {
@@ -202,24 +217,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleEnter() {
-        const currentSpan = characters[currentIndex];
+        const currentSpan = bodyText[currentIndex];
         currentSpan.classList.remove('cursor', 'incorrect', 'correct');
         currentSpan.classList.add('expectedEnter');
         currentIndex += 1;
-        if (currentIndex < characters.length) {
-            characters[currentIndex].classList.add('cursor');
+        if (currentIndex < bodyText.length) {
+            bodyText[currentIndex].classList.add('cursor');
         } else {
             console.log('타이핑 끝.');
         }
     }
 
     function handleCorrect() {
-        const currentSpan = characters[currentIndex];
+        const currentSpan = bodyText[currentIndex];
         currentSpan.classList.remove('cursor', 'incorrect', 'expectedEnter');
         currentSpan.classList.add('correct');
         currentIndex += 1;
-        if (currentIndex < characters.length) {
-            characters[currentIndex].classList.add('cursor');
+        if (currentIndex < bodyText.length) {
+            bodyText[currentIndex].classList.add('cursor');
         } else {
             console.log('타이핑 끝.');
             var result = confirm("이번 내용 타이핑이 끝났습니다.");
@@ -228,10 +243,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleIncorrect() {
-        const currentSpan = characters[currentIndex];
+        const currentSpan = bodyText[currentIndex];
         currentSpan.classList.add('incorrect');
         currentSpan.classList.remove('correct');
     }
 
     updateKeyboardLayout();
+
+    function scrollToCurrentChar() {
+        const $textDisplay = $('#text-display');
+        if (this.charIndex < this.characters.length) {
+            const $currentChar = $(this.characters[this.charIndex]);
+            if ($currentChar.length > 0) {
+                const displayHeight = $textDisplay.height();
+                const currentCharTop = $currentChar.position().top;
+                const scrollTop = $textDisplay.scrollTop();
+
+                // 현재 글자가 화면 하단에 가까워지면 스크롤
+                if (currentCharTop + $currentChar.height() > displayHeight + scrollTop) {
+                    $textDisplay.scrollTop(currentCharTop + $currentChar.height() - displayHeight + 20); // 20px 여유
+                }
+                // 현재 글자가 화면 상단 밖으로 벗어나면 스크롤 조정
+                else if (currentCharTop < scrollTop) {
+                    $textDisplay.scrollTop(currentCharTop - 20); // 20px 여유
+                }
+            }
+        }
+    }
 });

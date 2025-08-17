@@ -99,6 +99,10 @@ body {
     /* Tailwind blue-600 */
 }
 
+.wrap_dropdown select {
+    font-family: "Funnel Display";
+}
+
 .typing-area {
     width: 100%;
     background-color: var(--input-bg-light);
