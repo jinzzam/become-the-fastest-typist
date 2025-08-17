@@ -42,7 +42,8 @@ def process_data():
                         for i in range(len(line)):
                             char = line[i]
                             if(char == '\n') :
-                                char = char + '↵\n'
+                                char = '↵' + char
+                            
                             char = "<span>" + char + "</span>"
                             # print("@#$%!@#$" + char)
                             characters += char
