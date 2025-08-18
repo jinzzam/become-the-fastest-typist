@@ -1,4 +1,8 @@
 from flask import Flask, render_template, request, jsonify
+# 모듈 다운로드 필요    # 따옴표 지우기
+# pip 'install' flask
+# pip 'install' render_template
+# pip 'install' jsonify
 
 app = Flask(__name__)
 
@@ -16,7 +20,7 @@ def show_text():
         # 기타 파일 읽기 오류 처리
         print(f"파일 읽기 중 오류 발생: {e}")
 
-    # 'templates' 폴더 안에 있는 'type-temp.html' 파일을 렌더링하고 내용을 전달
+    # 'templates' 폴더 안에 있는 'type-template.html' 파일을 렌더링하고 내용을 전달
     return render_template('type-template.html', practice_content=file_content)
 
 # 데이터를 처리할 새로운 POST 라우트 정의

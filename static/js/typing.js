@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isHangulMode = false;
     let isCapsLockPressed = false;
     let currentIndex = 0;
-    // You need this variable for composition events.
-    let isComposing = false;
 
     // 키보드 레이아웃을 현재 상태에 맞춰 업데이트하는 함수
     function updateKeyboardLayout() {
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('messageBox').style.display = 'block';
     }
 
-    // --------- 이벤트 리스너 영역 ------------
+    // ---------------- 이벤트 리스너 영역 -------------------------
 
     // keydown 리스너에서 직접 문자를 처리하는 부분을 제거하고, 특수 키만 남김
     document.addEventListener('keydown', (event) => {
@@ -118,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (event.key === 'Backspace') {
             if (currentIndex > 0) {
                 const prevSpan = bodyText[currentIndex - 1];
-                prevSpan.classList.remove('correct', 'incorrect');
-                bodyText[currentIndex].classList.remove('cursor');
+                prevSpan.classList.remove('correct', 'incorrect', 'expectedEnter');
+                bodyText[currentIndex].classList.remove('cursor', 'incorrect');
                 currentIndex -= 1;
                 bodyText[currentIndex].classList.add('cursor');
             }
