@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys = document.querySelectorAll('.key');
     const korean_keys = document.querySelectorAll('.kor');
     const hangulEngKey = document.getElementById('key-HangulMode');
-    const originalTextElement = document.getElementById('original-text');
-    const originalText = originalTextElement.innerText;
-    const textDisplay = document.getElementById('text-display');
-    const bodyText = textDisplay.innerText;
+    originalTextElement = document.getElementById('original-text');
+    originalText = originalTextElement.innerText;
+    textDisplay = document.getElementById('text-display');
+    bodyText = textDisplay.innerText;
 
     let isShiftPressed = false;
     let isHangulMode = false;
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         handleInput(event.key);
 
-        scrollToCurrentChar();
+        // scrollToCurrentChar();
     });
 
     document.addEventListener('keyup', (event) => {
@@ -249,25 +249,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateKeyboardLayout();
-
-    function scrollToCurrentChar() {
-        const $textDisplay = $('#text-display');
-        if (this.charIndex < this.characters.length) {
-            const $currentChar = $(this.characters[this.charIndex]);
-            if ($currentChar.length > 0) {
-                const displayHeight = $textDisplay.height();
-                const currentCharTop = $currentChar.position().top;
-                const scrollTop = $textDisplay.scrollTop();
-
-                // 현재 글자가 화면 하단에 가까워지면 스크롤
-                if (currentCharTop + $currentChar.height() > displayHeight + scrollTop) {
-                    $textDisplay.scrollTop(currentCharTop + $currentChar.height() - displayHeight + 20); // 20px 여유
-                }
-                // 현재 글자가 화면 상단 밖으로 벗어나면 스크롤 조정
-                else if (currentCharTop < scrollTop) {
-                    $textDisplay.scrollTop(currentCharTop - 20); // 20px 여유
+    /*
+        function scrollToCurrentChar() {
+            const $textDisplay = $('#text-display');
+            if (this.charIndex < this.characters.length) {
+                const $currentChar = $(this.characters[this.charIndex]);
+                if ($currentChar.length > 0) {
+                    const displayHeight = $textDisplay.height();
+                    const currentCharTop = $currentChar.position().top;
+                    const scrollTop = $textDisplay.scrollTop();
+    
+                    // 현재 글자가 화면 하단에 가까워지면 스크롤
+                    if (currentCharTop + $currentChar.height() > displayHeight + scrollTop) {
+                        $textDisplay.scrollTop(currentCharTop + $currentChar.height() - displayHeight + 20); // 20px 여유
+                    }
+                    // 현재 글자가 화면 상단 밖으로 벗어나면 스크롤 조정
+                    else if (currentCharTop < scrollTop) {
+                        $textDisplay.scrollTop(currentCharTop - 20); // 20px 여유
+                    }
                 }
             }
         }
-    }
+            */
 });
