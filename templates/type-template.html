@@ -19,9 +19,10 @@
             // 언어 선택 드롭다운 메뉴의 값이 변경될 때마다 실행
             $("#language").on("change", function () {
                 var selectedLanguage = $(this).val(); // 선택된 언어 값 가져오기 
-                $(".txt").text(selectedLanguage); // 현재 선택된 언어를 임시로 표시
-
                 console.log("선택된 언어: " + selectedLanguage);
+
+                $("#language").val(selectedLanguage).prop("selected", true);
+                //  $("#mySelect").val("1").prop("selected", true);
 
                 // 서버로 보낼 데이터 준비 "code-java", "code-python"
                 var dataToSend = "code-" + selectedLanguage.toLowerCase();
@@ -39,10 +40,19 @@
                         if (response && response.message) {
                             showMessageBox("서버 응답: " + response.message + " (받은 데이터: " + selectedLanguage + ")");
                             characters = response.content;
+                            for(const char of characters){
+                                const newSpan = document.createElement("span");
+                                newSpan.textContent = char;
+                                const parentDiv = document.querySelector("#text-display");
+                                parentDiv.appendChild(newSpan);
+                            }
+                            // $("#original-text").html(characters);
+                            // $("#original-text").eq(0).addClass('cursor');
+
                             // 텍스트를 html로 그대로 넣기
-                            $("pre").html(characters);
+                            // $("pre").html(characters);
                             // 맨 첫번째 요소에 커서 효과
-                            $("pre span").eq(0).addClass('cursor');
+                            // $("pre span").eq(0).addClass('cursor');
                         } else {
                             showMessageBox("알 수 없는 서버 응답 형식.");
                         }
@@ -52,6 +62,7 @@
                         console.error("AJAX Error:", status, error, xhr.responseText);
                         showMessageBox("에러 발생: " + (xhr.responseText || error));
                     }
+
                 });
             });
         });
@@ -63,7 +74,7 @@
 
     <div class="container">
         <div class="typing-area">
-            <div style="overflow-x: hidden; overflow-y: scroll; height: 260px;" readonly>
+            <div id="parent-text-display" style="overflow-x: hidden; overflow-y: scroll; height: 260px;" readonly>
                 <!-- 텍스트가 표시될 공간 -->
                 <pre id="text-display"></pre>
             </div>

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     originalTextElement = document.getElementById('original-text');
     originalText = originalTextElement.innerText;
     textDisplay = document.getElementById('text-display');
-    bodyText = textDisplay.innerText;
+    bodyText = textDisplay.innerHtml;
 
     let isShiftPressed = false;
     let isHangulMode = false;
